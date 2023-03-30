@@ -12,6 +12,20 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+
+      - name: Setup cmake
+        uses: jwlawson/actions-setup-cmake@v1.13
+        with:
+          cmake-version: "3.26.x"
+
+      - uses: lovasoa/setup-emscripten@master
+        with:
+          emscripten-version: "1.38.47"
+
+      - name: install wabt
+        uses: chiefbiiko/setup-wabt@1.0.0
+        run: wat2wasm --help
+
       - run: make all debug=true
       - run: make package
       - run: make app
