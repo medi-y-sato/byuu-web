@@ -5,9 +5,9 @@
 そのまま `make all` してもだめなので、
 
 ```sh
-brew install cmake
-brew install emscripten
-brew install wabt
+brew install cmake emscripten wabt
+ or
+sudo apt install cmake emscripten wabt
 ```
 
 してから
