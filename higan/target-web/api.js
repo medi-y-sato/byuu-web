@@ -63,7 +63,7 @@ function getBinaryPath() {
   try {
     return require('./byuu-web-lib.wasm').default
   } catch (error) {
-    throw new Error('Failed to load WASM code - see https://github.com/Wizcorp/byuu-web#failed-to-load-wasm-code')
+    throw new Error('Failed to load WASM code - see https://github.com/medi-y-sato/byuu-web#failed-to-load-wasm-code')
   }
 }
 

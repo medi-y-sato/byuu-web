@@ -29,10 +29,16 @@ source ./emsdk_env.sh
 してから
 
 ```sh
-make all debug=true
-make package
-make app
+make all debug=true ; make app ; make serve 
 ```
+
+リリースは
+
+```sh
+make all debug=false ; make package
+```
+
+出力先は `./higan/out/app` になる
 
 お掃除は
 
@@ -42,7 +48,7 @@ make clean
 
 ## 出力先
 
-`./higan/out/app`
+
 
 ## パッド系の処理
 
