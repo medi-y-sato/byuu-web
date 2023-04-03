@@ -4,7 +4,7 @@
   "homepage": "https://github.com/medi-y-sato/byuu-web#readme",
   "repository": "github:medi-y-sato/byuu-web",
   "bugs": {
-    "url": "https://github.com/Wizcorp/byuu-web/issues"
+    "url": "https://github.com/medi-y-sato/byuu-web/issues"
   },
   "description": "Emulation library for various game consoles",
   "main": "api.js",
