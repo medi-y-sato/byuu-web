@@ -1,51 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" name="viewport"/>
-    <meta name='apple-mobile-web-app-capable' content='yes' />
-    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'/>
-    <meta name='apple-mobile-web-app-title' content='byuu'>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="byuu" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="./assets/icons/site.webmanifest">
-    <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="./assets/icons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="./assets/icons/browserconfig.xml">
-    <meta name="theme-color" content="#000000">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/icons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="./assets/icons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#000000" />
 
     <title>byuu \\ web</title>
 
     <!-- service worker -->
     <script>
-      if (window.location.href.includes('localhost') === 'false') {
-        navigator.serviceWorker.register('./service-worker.js', {scope: './'})
-          .then((reg) => console.log('Registration succeeded. Scope is ' + reg.scope))
-          .catch((error) =>  console.error('Registration failed with ' + error));
+      if (window.location.href.includes("localhost") === "false") {
+        navigator.serviceWorker
+          .register("./service-worker.js", { scope: "./" })
+          .then((reg) =>
+            console.log("Registration succeeded. Scope is " + reg.scope)
+          )
+          .catch((error) => console.error("Registration failed with " + error));
       }
     </script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- FPS Meter -->
-    <script src="https://unpkg.com/fpsmeter@0.3.1/dist/fpsmeter.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://unpkg.com/fpsmeter@0.3.1/dist/fpsmeter.min.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-      * { touch-action: none !important; }
-      .btn:focus, .btn:active { outline: none; box-shadow: none; }
-      .btn { font-style: normal; }
-      body { 
+      * {
+        touch-action: none !important;
+      }
+      .btn:focus,
+      .btn:active {
+        outline: none;
+        box-shadow: none;
+      }
+      .btn {
+        font-style: normal;
+      }
+      body {
         position: absolute;
         display: flex;
         flex-wrap: wrap;
@@ -55,10 +116,10 @@
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 0; 
-        margin: 0; 
-        background: #070708; 
-        font-family: 'Muli', sans-serif; 
+        padding: 0;
+        margin: 0;
+        background: #070708;
+        font-family: "Muli", sans-serif;
       }
 
       body.mobile {
@@ -93,7 +154,8 @@
         width: 40px;
         height: 40px;
         border-radius: 20px;
-        background: rgba(100, 100, 100, 0.5) url('./assets/images/menu.png') 50% 50% no-repeat;
+        background: rgba(100, 100, 100, 0.5) url("./assets/images/menu.png") 50%
+          50% no-repeat;
         background-size: 24px;
       }
       .mobile #pauseMenuButton {
@@ -125,13 +187,13 @@
         width: 40px;
         height: 40px;
         border-radius: 20px;
-        background: rgba(100, 100, 100, 0.5) url('./assets/images/arrowDown.png') 50% 50% no-repeat;
+        background: rgba(100, 100, 100, 0.5)
+          url("./assets/images/arrowDown.png") 50% 50% no-repeat;
         background-size: 24px;
       }
       .mobile #closePauseMenuButton {
         display: block;
       }
-
 
       /* Action buttons */
       #actions {
@@ -168,7 +230,7 @@
       }
 
       #game-selector:empty {
-        display: none
+        display: none;
       }
 
       #game-selector {
@@ -181,9 +243,9 @@
         border-radius: 0;
         background: #343434;
         /* disable background shine on iOS */
-        -webkit-appearance:none;
-        font-family: 'Press Start 2P', cursive;
-        color: #F7F8EE;
+        -webkit-appearance: none;
+        font-family: "Press Start 2P", cursive;
+        color: #f7f8ee;
       }
 
       #actions .btn-group {
@@ -263,26 +325,26 @@
         cursor: pointer;
       }
 
-      #settingsArea input[type="radio"]:checked+label {
-        background-color: #EB5505;
+      #settingsArea input[type="radio"]:checked + label {
+        background-color: #eb5505;
       }
 
-      #settingsArea input[type=range] {
+      #settingsArea input[type="range"] {
         -webkit-appearance: none;
         width: 100px;
         background: transparent;
       }
-      #settingsArea input[type=range]::-webkit-slider-runnable-track {
+      #settingsArea input[type="range"]::-webkit-slider-runnable-track {
         width: 100%;
         height: 20px;
         background-color: #343434;
         border-radius: 5px;
       }
-      #settingsArea input[type=range]::-webkit-slider-thumb {
+      #settingsArea input[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
         height: 20px;
         width: 20px;
-        background: #EB5505;
+        background: #eb5505;
         border-radius: 5px;
       }
 
@@ -354,10 +416,10 @@
         top: calc(50% - 16px);
         left: calc(50% - 150px);
         font-size: 32px;
-        font-family: 'Press Start 2P', cursive;
-        color: #F7F8EE;
+        font-family: "Press Start 2P", cursive;
+        color: #f7f8ee;
         text-align: center;
-        background-color: rgba(0,0,0,0.75);
+        background-color: rgba(0, 0, 0, 0.75);
       }
 
       /* Notification zone */
@@ -389,9 +451,8 @@
       #notification-box .container .alert {
         opacity: 0;
         transform: scale(0);
-        transition: 
-          opacity cubic-bezier(0.165, 0.840, 0.440, 1.000) 250ms, 
-          transform cubic-bezier(0.165, 0.840, 0.440, 1.000) 250ms;
+        transition: opacity cubic-bezier(0.165, 0.84, 0.44, 1) 250ms,
+          transform cubic-bezier(0.165, 0.84, 0.44, 1) 250ms;
         background-color: rgba(255, 255, 255, 0.8);
         border-width: 5px;
         border-radius: 10px;
@@ -419,10 +480,10 @@
         opacity: 1;
         transform: scale(1);
       }
-      
+
       /* Show keymaps only on desktop */
-      #keymaps { 
-        position: absolute; 
+      #keymaps {
+        position: absolute;
         display: none;
         top: calc(50% - 150px);
         left: 0;
@@ -434,7 +495,7 @@
         display: none;
         flex-wrap: wrap;
         max-width: 700px;
-        border: 3px solid #E94F37;
+        border: 3px solid #e94f37;
         border-radius: 10px;
         padding: 20px 10px 10px;
         margin: 0 auto;
@@ -445,7 +506,6 @@
         transform: scale(2);
       }
 
-
       .keymap {
         display: block;
         margin: 0 20px 10px;
@@ -453,8 +513,8 @@
 
       .keymap .button {
         display: inline-block;
-        background: #393E41;
-        color: #F7F8EE;
+        background: #393e41;
+        color: #f7f8ee;
         padding: 5px 10px;
         text-align: center;
         border-radius: 5px;
@@ -462,7 +522,7 @@
 
       .keymap .key {
         display: inline-block;
-        color: #F7F8EE;
+        color: #f7f8ee;
         margin-left: 10px;
       }
 
@@ -483,7 +543,8 @@
       #virtualGamepad .button {
         box-sizing: border-box;
         position: absolute;
-        background: url('./assets/images/gamepad/buttonCircle.png') 50% 50% no-repeat;
+        background: url("./assets/images/gamepad/buttonCircle.png") 50% 50%
+          no-repeat;
         background-size: contain;
         width: 10vw;
         height: 10vw;
@@ -497,16 +558,16 @@
       }
 
       #virtualGamepad .button_Left {
-        background-image: url('./assets/images/gamepad/buttonTriangleLeft.png');
+        background-image: url("./assets/images/gamepad/buttonTriangleLeft.png");
       }
       #virtualGamepad .button_Right {
-        background-image: url('./assets/images/gamepad/buttonTriangleRight.png');
+        background-image: url("./assets/images/gamepad/buttonTriangleRight.png");
       }
       #virtualGamepad .button_Up {
-        background-image: url('./assets/images/gamepad/buttonTriangleUp.png');
+        background-image: url("./assets/images/gamepad/buttonTriangleUp.png");
       }
       #virtualGamepad .button_Down {
-        background-image: url('./assets/images/gamepad/buttonTriangleDown.png');
+        background-image: url("./assets/images/gamepad/buttonTriangleDown.png");
       }
 
       #virtualGamepad .button_L,
@@ -515,7 +576,7 @@
       #virtualGamepad .button_Mode,
       #virtualGamepad .button_Start,
       #virtualGamepad .button_Microphone {
-        background-image: url('./assets/images/gamepad/buttonRectangle.png');
+        background-image: url("./assets/images/gamepad/buttonRectangle.png");
         width: 20vw;
         height: 10vw;
         line-height: 10vw;
@@ -525,7 +586,8 @@
       #virtualGamepad .button_Microphone {
         display: none;
         text-align: center;
-        filter: grayscale(100%) brightness(120%) sepia(100%) hue-rotate(-100deg) saturate(600%) contrast(2);
+        filter: grayscale(100%) brightness(120%) sepia(100%) hue-rotate(-100deg)
+          saturate(600%) contrast(2);
       }
 
       #virtualGamepad .console {
@@ -535,75 +597,214 @@
         display: block;
       }
 
-      #virtualGamepad .console[data-console="Famicom"] .button_Left { left: 12.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_Right { left: 37.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_Up { left: 25%; top: 33.333%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_Down { left: 25%; top: 66.666%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_A { left: 85%; top: 50%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_B { left: 65%; top: 50%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_Select { left: 11%; top: 92%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_Start { left: 89%; top: 92%; }
-      #virtualGamepad .console[data-console="Famicom"] .button_Microphone { left: 50%; top: 15%; }
+      #virtualGamepad .console[data-console="Famicom"] .button_Left {
+        left: 12.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_Right {
+        left: 37.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_Up {
+        left: 25%;
+        top: 33.333%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_Down {
+        left: 25%;
+        top: 66.666%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_A {
+        left: 85%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_B {
+        left: 65%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_Select {
+        left: 11%;
+        top: 92%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_Start {
+        left: 89%;
+        top: 92%;
+      }
+      #virtualGamepad .console[data-console="Famicom"] .button_Microphone {
+        left: 50%;
+        top: 15%;
+      }
 
-      #virtualGamepad .console[data-console="Super Famicom"] .button_Left { left: 12.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_Right { left: 37.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_Up { left: 25%; top: 33.333%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_Down { left: 25%; top: 66.666%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_A { left: 87.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_B { left: 75%; top: 66.666%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_X { left: 75%; top: 33.333%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_Y { left: 62.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_L { left: 11%; top: 8%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_R { left: 89%; top: 8%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_Select { left: 11%; top: 92%; }
-      #virtualGamepad .console[data-console="Super Famicom"] .button_Start { left: 89%; top: 92%; }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_Left {
+        left: 12.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_Right {
+        left: 37.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_Up {
+        left: 25%;
+        top: 33.333%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_Down {
+        left: 25%;
+        top: 66.666%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_A {
+        left: 87.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_B {
+        left: 75%;
+        top: 66.666%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_X {
+        left: 75%;
+        top: 33.333%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_Y {
+        left: 62.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_L {
+        left: 11%;
+        top: 8%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_R {
+        left: 89%;
+        top: 8%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_Select {
+        left: 11%;
+        top: 92%;
+      }
+      #virtualGamepad .console[data-console="Super Famicom"] .button_Start {
+        left: 89%;
+        top: 92%;
+      }
 
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Left { left: 12.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Right { left: 37.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Up { left: 25%; top: 33.333%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Down { left: 25%; top: 66.666%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_A { left: 67.5%; top: 70%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_B { left: 80%; top: 60%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_C { left: 92.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_X { left: 57.5%; top: 50%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Y { left: 70%; top: 40%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Z { left: 82.5%; top: 30%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Mode { left: 11%; top: 92%; }
-      #virtualGamepad .console[data-console="Mega Drive"] .button_Start { left: 89%; top: 92%; }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Left {
+        left: 12.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Right {
+        left: 37.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Up {
+        left: 25%;
+        top: 33.333%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Down {
+        left: 25%;
+        top: 66.666%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_A {
+        left: 67.5%;
+        top: 70%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_B {
+        left: 80%;
+        top: 60%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_C {
+        left: 92.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_X {
+        left: 57.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Y {
+        left: 70%;
+        top: 40%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Z {
+        left: 82.5%;
+        top: 30%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Mode {
+        left: 11%;
+        top: 92%;
+      }
+      #virtualGamepad .console[data-console="Mega Drive"] .button_Start {
+        left: 89%;
+        top: 92%;
+      }
 
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Left { left: 12.5%; top: 50%; }
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Right { left: 37.5%; top: 50%; }
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Up { left: 25%; top: 33.333%; }
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Down { left: 25%; top: 66.666%; }
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_A { left: 62.5%; top: 60%; }
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_B { left: 75%; top: 50%; }
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_C { left: 87.55%; top: 40%; }
-      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Start { left: 89%; top: 92%; }
+      #virtualGamepad.md3Buttons
+        .console[data-console="Mega Drive"]
+        .button_Left {
+        left: 12.5%;
+        top: 50%;
+      }
+      #virtualGamepad.md3Buttons
+        .console[data-console="Mega Drive"]
+        .button_Right {
+        left: 37.5%;
+        top: 50%;
+      }
+      #virtualGamepad.md3Buttons
+        .console[data-console="Mega Drive"]
+        .button_Up {
+        left: 25%;
+        top: 33.333%;
+      }
+      #virtualGamepad.md3Buttons
+        .console[data-console="Mega Drive"]
+        .button_Down {
+        left: 25%;
+        top: 66.666%;
+      }
+      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_A {
+        left: 62.5%;
+        top: 60%;
+      }
+      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_B {
+        left: 75%;
+        top: 50%;
+      }
+      #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_C {
+        left: 87.55%;
+        top: 40%;
+      }
+      #virtualGamepad.md3Buttons
+        .console[data-console="Mega Drive"]
+        .button_Start {
+        left: 89%;
+        top: 92%;
+      }
 
       #virtualGamepad.colored .console[data-console="Famicom"] .button_A {
         /* red */
-        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+          saturate(600%) contrast(0.8);
       }
       #virtualGamepad.colored .console[data-console="Famicom"] .button_B {
         /* red */
-        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+          saturate(600%) contrast(0.8);
       }
 
       #virtualGamepad.colored .console[data-console="Super Famicom"] .button_A {
         /* red */
-        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+          saturate(600%) contrast(0.8);
       }
       #virtualGamepad.colored .console[data-console="Super Famicom"] .button_B {
         /* yellow */
-        filter: grayscale(100%) brightness(120%) sepia(90%) hue-rotate(5deg) saturate(500%) contrast(0.7);
+        filter: grayscale(100%) brightness(120%) sepia(90%) hue-rotate(5deg)
+          saturate(500%) contrast(0.7);
       }
       #virtualGamepad.colored .console[data-console="Super Famicom"] .button_X {
         /* blue */
-        filter: grayscale(100%) brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%) contrast(0.8);
+        filter: grayscale(100%) brightness(30%) sepia(100%) hue-rotate(-180deg)
+          saturate(700%) contrast(0.8);
       }
       #virtualGamepad.colored .console[data-console="Super Famicom"] .button_Y {
         /* green */
-        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg) saturate(1000%) contrast(0.8);
+        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg)
+          saturate(1000%) contrast(0.8);
       }
 
       @media (orientation: landscape) {
@@ -633,65 +834,204 @@
           transform: translate(-5vw, -2.5vw);
         }
 
-        #virtualGamepad .console[data-console="Famicom"] .button_Left { left: 6.25%; top: 50%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_Right { left: 18.75%; top: 50%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_Up { left: 12.5%; top: 33.333%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_Down { left: 12.5%; top: 66.666%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_A { left: 92.5%; top: 50%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_B { left: 82.5%; top: 50%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_Select { left: 5.5%; top: 92%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_Start { left: 94.5%; top: 92%; }
-        #virtualGamepad .console[data-console="Famicom"] .button_Microphone { left: 87.75%; top: 25%; }
+        #virtualGamepad .console[data-console="Famicom"] .button_Left {
+          left: 6.25%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_Right {
+          left: 18.75%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_Up {
+          left: 12.5%;
+          top: 33.333%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_Down {
+          left: 12.5%;
+          top: 66.666%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_A {
+          left: 92.5%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_B {
+          left: 82.5%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_Select {
+          left: 5.5%;
+          top: 92%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_Start {
+          left: 94.5%;
+          top: 92%;
+        }
+        #virtualGamepad .console[data-console="Famicom"] .button_Microphone {
+          left: 87.75%;
+          top: 25%;
+        }
 
-        #virtualGamepad .console[data-console="Super Famicom"] .button_Left { left: 6.25%; top: 50%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_Right { left: 18.75%; top: 50%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_Up { left: 12.5%; top: 33.333%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_Down { left: 12.5%; top: 66.666%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_A { left: 93.75%; top: 50%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_B { left: 87.5%; top: 66.666%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_X { left: 87.5%; top: 33.333%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_Y { left: 81.25%; top: 50%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_L { left: 5.5%; top: 8%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_R { left: 94.5%; top: 8%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_Select { left: 5.5%; top: 92%; }
-        #virtualGamepad .console[data-console="Super Famicom"] .button_Start { left: 94.5%; top: 92%; }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_Left {
+          left: 6.25%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_Right {
+          left: 18.75%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_Up {
+          left: 12.5%;
+          top: 33.333%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_Down {
+          left: 12.5%;
+          top: 66.666%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_A {
+          left: 93.75%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_B {
+          left: 87.5%;
+          top: 66.666%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_X {
+          left: 87.5%;
+          top: 33.333%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_Y {
+          left: 81.25%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_L {
+          left: 5.5%;
+          top: 8%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_R {
+          left: 94.5%;
+          top: 8%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_Select {
+          left: 5.5%;
+          top: 92%;
+        }
+        #virtualGamepad .console[data-console="Super Famicom"] .button_Start {
+          left: 94.5%;
+          top: 92%;
+        }
 
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Left { left: 6.25%; top: 50%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Right { left: 18.75%; top: 50%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Up { left: 12.5%; top: 33.333%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Down { left: 12.5%; top: 66.666%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_A { left: 83.75%; top: 70%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_B { left: 90%; top: 60%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_C { left: 96.25%; top: 50%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_X { left: 78.75%; top: 50%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Y { left: 85%; top: 40%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Z { left: 91.25%; top: 30%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Mode { left: 5.5%; top: 92%; }
-        #virtualGamepad .console[data-console="Mega Drive"] .button_Start { left: 94.5%; top: 92%; }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Left {
+          left: 6.25%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Right {
+          left: 18.75%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Up {
+          left: 12.5%;
+          top: 33.333%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Down {
+          left: 12.5%;
+          top: 66.666%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_A {
+          left: 83.75%;
+          top: 70%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_B {
+          left: 90%;
+          top: 60%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_C {
+          left: 96.25%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_X {
+          left: 78.75%;
+          top: 50%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Y {
+          left: 85%;
+          top: 40%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Z {
+          left: 91.25%;
+          top: 30%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Mode {
+          left: 5.5%;
+          top: 92%;
+        }
+        #virtualGamepad .console[data-console="Mega Drive"] .button_Start {
+          left: 94.5%;
+          top: 92%;
+        }
 
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Left { left: 6.25%; top: 50%; }
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Right { left: 18.75%; top: 50%; }
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Up { left: 12.5%; top: 33.333%; }
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Down { left: 12.5%; top: 66.666%; }
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_A { left: 81.25%; top: 60%; }
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_B { left: 87.5%; top: 50%; }
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_C { left: 93.75%; top: 40%; }
-        #virtualGamepad.md3Buttons .console[data-console="Mega Drive"] .button_Start { left: 94.5%; top: 92%; }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_Left {
+          left: 6.25%;
+          top: 50%;
+        }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_Right {
+          left: 18.75%;
+          top: 50%;
+        }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_Up {
+          left: 12.5%;
+          top: 33.333%;
+        }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_Down {
+          left: 12.5%;
+          top: 66.666%;
+        }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_A {
+          left: 81.25%;
+          top: 60%;
+        }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_B {
+          left: 87.5%;
+          top: 50%;
+        }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_C {
+          left: 93.75%;
+          top: 40%;
+        }
+        #virtualGamepad.md3Buttons
+          .console[data-console="Mega Drive"]
+          .button_Start {
+          left: 94.5%;
+          top: 92%;
+        }
       }
 
       /* Loading screen */
       #overlay {
-        background: #F7F8EE;
+        background: #f7f8ee;
         opacity: 1;
         z-index: 999;
-        position: fixed; 
+        position: fixed;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        top: 0; 
-        bottom: 0; 
-        left: 0; 
+        top: 0;
+        bottom: 0;
+        left: 0;
         right: 0;
         transition: opacity ease-out 250ms;
       }
@@ -705,7 +1045,7 @@
       }
 
       #status {
-        color: #393E41;
+        color: #393e41;
         margin: 0 auto;
         display: block;
         width: 100%;
@@ -715,12 +1055,12 @@
       }
 
       .spinner {
-        background-color: #F7F8EE; 
+        background-color: #f7f8ee;
         position: relative;
         border-radius: 50%;
         display: inline-block;
         height: 300px;
-        width: 200px;  
+        width: 200px;
         box-sizing: border-box;
         text-align: center;
         padding: 20px;
@@ -728,7 +1068,7 @@
 
       .spinner:before {
         border-radius: 50%;
-        content: "";  
+        content: "";
         clip-path: inset(0% 0% 0% 0%);
         animation: spin 1s linear infinite;
         width: 200px;
@@ -742,14 +1082,21 @@
 
       @keyframes spin {
         0% {
-          background-image: linear-gradient(to bottom, rgba(233,79,55,1) 0%, rgba(0,212,255,1) 100%);
+          background-image: linear-gradient(
+            to bottom,
+            rgba(233, 79, 55, 1) 0%,
+            rgba(0, 212, 255, 1) 100%
+          );
           transform: rotate(0deg);
-        } 
-        
+        }
+
         100% {
-        background-image: linear-gradient(to bottom, rgba(233,79,55,1) 0%, rgba(0,212,255,1) 100%);
+          background-image: linear-gradient(
+            to bottom,
+            rgba(233, 79, 55, 1) 0%,
+            rgba(0, 212, 255, 1) 100%
+          );
           transform: rotate(360deg);
-          
         }
       }
     </style>
@@ -767,10 +1114,9 @@
 
     <div id="fpsWrapper"></div>
 
-    <div id="pauseMenuButton" style="display: none;">
-    </div>
+    <div id="pauseMenuButton" style="display: none"></div>
 
-    <div id="pauseMenu" style="display: block;">
+    <div id="pauseMenu" style="display: block">
       <div id="closePauseMenuButton"></div>
       <!-- Emulator functionalities -->
       <div id="actions">
@@ -779,72 +1125,153 @@
           <select id="game-selector"></select>
         </div>
         <div class="btn-group" role="group" aria-label="Options">
-          <button type="button" class="btn btn-secondary" id="start">Start</button>
-          <button type="button" class="btn btn-secondary" id="pause">Pause</button>
-          <button type="button" class="btn btn-secondary" id="fullscreen">Fullscreen</button>
+          <button type="button" class="btn btn-secondary" id="start">
+            Start
+          </button>
+          <button type="button" class="btn btn-secondary" id="pause">
+            Pause
+          </button>
+          <button type="button" class="btn btn-secondary" id="fullscreen">
+            Fullscreen
+          </button>
           <label class="btn btn-secondary" id="add">
             <input type="file" id="game-files" name="files[]" multiple />
             <span>Add ROMS</span>
           </label>
         </div>
         <div class="btn-group" role="group" aria-label="Options">
-          <button type="button" class="btn btn-secondary" id="save-state">Save state</button>
-          <button type="button" class="btn btn-secondary" id="load-state">Load state</button>
-          <button type="button" class="btn btn-secondary" id="settings">Settings</button>
-          <button type="button" class="btn btn-secondary" id="toggle-keymap">Show keymap</button>
-          <button type="button" class="btn btn-secondary" id="show-profiler">Profiler</button>
+          <button type="button" class="btn btn-secondary" id="save-state">
+            Save state
+          </button>
+          <button type="button" class="btn btn-secondary" id="load-state">
+            Load state
+          </button>
+          <button type="button" class="btn btn-secondary" id="settings">
+            Settings
+          </button>
+          <button type="button" class="btn btn-secondary" id="toggle-keymap">
+            Show keymap
+          </button>
+          <button type="button" class="btn btn-secondary" id="show-profiler">
+            Profiler
+          </button>
         </div>
         <div id="settingsArea">
           <form name="settingsForm">
             <div class="settingEntry mobileSetting">
               <div class="label">Gamepad opacity</div>
               <div class="values">
-                <input type="range" name="gamepadOpacity" id="" min="0" max="1" step="0.01" value="0.7">
+                <input
+                  type="range"
+                  name="gamepadOpacity"
+                  id=""
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="0.7"
+                />
               </div>
             </div>
             <div class="settingEntry mobileSetting">
               <div class="label">Gamepad colored</div>
               <div class="values">
-                <input type="radio" id="gamepadColored_off" name="gamepadColored" value="off" checked>
+                <input
+                  type="radio"
+                  id="gamepadColored_off"
+                  name="gamepadColored"
+                  value="off"
+                  checked
+                />
                 <label for="gamepadColored_off">Off</label>
-                <input type="radio" id="gamepadColored_on" name="gamepadColored" value="on">
+                <input
+                  type="radio"
+                  id="gamepadColored_on"
+                  name="gamepadColored"
+                  value="on"
+                />
                 <label for="gamepadColored_on">On</label>
               </div>
             </div>
             <div class="settingEntry mobileSetting">
               <div class="label">Gamepad position</div>
               <div class="values">
-                <input type="radio" id="gamepadPosition_low" name="gamepadPosition" value="low" checked>
+                <input
+                  type="radio"
+                  id="gamepadPosition_low"
+                  name="gamepadPosition"
+                  value="low"
+                  checked
+                />
                 <label for="gamepadPosition_low">Low</label>
-                <input type="radio" id="gamepadPosition_high" name="gamepadPosition" value="high">
+                <input
+                  type="radio"
+                  id="gamepadPosition_high"
+                  name="gamepadPosition"
+                  value="high"
+                />
                 <label for="gamepadPosition_high">High</label>
               </div>
             </div>
             <div class="settingEntry mobileSetting">
               <div class="label">Mega Drive layout</div>
               <div class="values">
-                <input type="radio" id="md6Buttons" name="specialLayout" value="md6Buttons" checked>
+                <input
+                  type="radio"
+                  id="md6Buttons"
+                  name="specialLayout"
+                  value="md6Buttons"
+                  checked
+                />
                 <label for="md6Buttons">6 buttons</label>
-                <input type="radio" id="md3Buttons" name="specialLayout" value="md3Buttons">
+                <input
+                  type="radio"
+                  id="md3Buttons"
+                  name="specialLayout"
+                  value="md3Buttons"
+                />
                 <label for="md3Buttons">3 buttons</label>
               </div>
             </div>
             <div class="settingEntry mobileSetting">
               <div class="label">Gamepad touch area</div>
               <div class="values">
-                <input type="radio" id="touchArea_narrow" name="touchArea" value="narrow">
+                <input
+                  type="radio"
+                  id="touchArea_narrow"
+                  name="touchArea"
+                  value="narrow"
+                />
                 <label for="touchArea_narrow">Narrow</label>
-                <input type="radio" id="touchArea_wide" name="touchArea" value="wide">
+                <input
+                  type="radio"
+                  id="touchArea_wide"
+                  name="touchArea"
+                  value="wide"
+                />
                 <label for="touchArea_wide">Wide</label>
-                <input type="radio" id="touchArea_full" name="touchArea" value="full" checked>
+                <input
+                  type="radio"
+                  id="touchArea_full"
+                  name="touchArea"
+                  value="full"
+                  checked
+                />
                 <label for="touchArea_full">Full</label>
               </div>
             </div>
-            
+
             <div class="settingEntry">
               <div class="label">Volume</div>
               <div class="values">
-                <input type="range" name="volume" id="volume" min="0" max="100" step="1" value="100">
+                <input
+                  type="range"
+                  name="volume"
+                  id="volume"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="100"
+                />
                 <input type="checkbox" name="mute" id="mute" />
                 <label for="mute">Mute</label>
               </div>
@@ -862,9 +1289,18 @@
                   <label for="fc-mic">Show mic button</label>
                   <input type="checkbox" name="fc-overscan" id="fc-overscan" />
                   <label for="fc-overscan">Overscan</label>
-                  <input type="checkbox" name="fc-skipframe" id="fc-skipframe" />
+                  <input
+                    type="checkbox"
+                    name="fc-skipframe"
+                    id="fc-skipframe"
+                  />
                   <label for="fc-skipframe">Skip frame</label>
-                  <input type="checkbox" name="fc-synconce" id="fc-synconce" checked />
+                  <input
+                    type="checkbox"
+                    name="fc-synconce"
+                    id="fc-synconce"
+                    checked
+                  />
                   <label for="fc-synconce">CPU - Sync once per cycle</label>
                   <select name="fc-overclock" id="fc-overclock">
                     <option value="0.25">0.25</option>
@@ -880,7 +1316,12 @@
               <div data-console="Super Famicom">
                 <div class="label">SFC Core</div>
                 <div class="values">
-                  <input type="checkbox" name="sfc-fastmath" id="sfc-fastmath" checked />
+                  <input
+                    type="checkbox"
+                    name="sfc-fastmath"
+                    id="sfc-fastmath"
+                    checked
+                  />
                   <label for="sfc-fastmath">Fast math</label>
                   <select name="sfc-cpu-overclock" id="sfc-cpu-overclock">
                     <option value="0.25">0.25</option>
@@ -909,9 +1350,18 @@
                     <option value="2">2</option>
                   </select>
                   <label for="sfc-dsp-overclock">DSP Overclock</label>
-                  <input type="checkbox" name="sfc-lockstep" id="sfc-lockstep" checked />
+                  <input
+                    type="checkbox"
+                    name="sfc-lockstep"
+                    id="sfc-lockstep"
+                    checked
+                  />
                   <label for="sfc-lockstep">Lockstep</label>
-                  <input type="checkbox" name="sfc-skipframe" id="sfc-skipframe" />
+                  <input
+                    type="checkbox"
+                    name="sfc-skipframe"
+                    id="sfc-skipframe"
+                  />
                   <label for="sfc-skipframe">Skip frame</label>
                   <input type="checkbox" name="sfc-dsp" id="sfc-dsp" checked />
                   <label for="sfc-dsp">DSP</label>
@@ -920,7 +1370,11 @@
               <div data-console="Mega Drive">
                 <div class="label">Mega Drive Core</div>
                 <div class="values">
-                  <input type="checkbox" name="md-skipframe" id="md-skipframe" />
+                  <input
+                    type="checkbox"
+                    name="md-skipframe"
+                    id="md-skipframe"
+                  />
                   <label for="md-skipframe">Skip frame</label>
                   <select name="md-cpu-overclock" id="md-cpu-overclock">
                     <option value="0.25">0.25</option>
@@ -960,7 +1414,11 @@
     <div id="main">
       <!-- Render canvas -->
       <div id="display">
-        <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+        <canvas
+          id="canvas"
+          oncontextmenu="event.preventDefault()"
+          tabindex="-1"
+        ></canvas>
         <div id="game-loading">Loading</div>
         <div id="notification-box">
           <div class="container"></div>
@@ -969,215 +1427,763 @@
 
       <!-- Keymaps -->
       <div id="keymaps">
-        <div data-console="Famicom" data-port="Controller Port 1" data-type="Gamepad">
-          <div class="keymap"><span class="button">Up</span><span class="key">W</span></div>
-          <div class="keymap"><span class="button">Left</span><span class="key">A</span></div>
-          <div class="keymap"><span class="button">Down</span><span class="key">S</span></div>
-          <div class="keymap"><span class="button">Right</span><span class="key">D</span></div>
-          <div class="keymap"><span class="button">A</span><span class="key">K</span></div>
-          <div class="keymap"><span class="button">B</span><span class="key">L</span></div>
-          <div class="keymap"><span class="button">Select</span><span class="key">Backspace</span></div>
-          <div class="keymap"><span class="button">Start</span><span class="key">Enter</span></div>
-          <div class="keymap"><span class="button">Microphone</span><span class="key">P</span></div>
+        <div
+          data-console="Famicom"
+          data-port="Controller Port 1"
+          data-type="Gamepad"
+        >
+          <div class="keymap">
+            <span class="button">Up</span><span class="key">W</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Left</span><span class="key">A</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Down</span><span class="key">S</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Right</span><span class="key">D</span>
+          </div>
+          <div class="keymap">
+            <span class="button">A</span><span class="key">K</span>
+          </div>
+          <div class="keymap">
+            <span class="button">B</span><span class="key">L</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Select</span><span class="key">Backspace</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Start</span><span class="key">Enter</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Microphone</span><span class="key">P</span>
+          </div>
         </div>
-        <div data-console="Super Famicom" data-port="Controller Port 1" data-type="Gamepad">
-          <div class="keymap"><span class="button">Up</span><span class="key">W</span></div>
-          <div class="keymap"><span class="button">Left</span><span class="key">A</span></div>
-          <div class="keymap"><span class="button">Down</span><span class="key">S</span></div>
-          <div class="keymap"><span class="button">Right</span><span class="key">D</span></div>
-          <div class="keymap"><span class="button">L</span><span class="key">9</span></div>
-          <div class="keymap"><span class="button">R</span><span class="key">0</span></div>
-          <div class="keymap"><span class="button">X</span><span class="key">O</span></div>
-          <div class="keymap"><span class="button">Y</span><span class="key">P</span></div>
-          <div class="keymap"><span class="button">A</span><span class="key">K</span></div>
-          <div class="keymap"><span class="button">B</span><span class="key">L</span></div>
-          <div class="keymap"><span class="button">Select</span><span class="key">Backspace</span></div>
-          <div class="keymap"><span class="button">Start</span><span class="key">Enter</span></div>
+        <div
+          data-console="Super Famicom"
+          data-port="Controller Port 1"
+          data-type="Gamepad"
+        >
+          <div class="keymap">
+            <span class="button">Up</span><span class="key">W</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Left</span><span class="key">A</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Down</span><span class="key">S</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Right</span><span class="key">D</span>
+          </div>
+          <div class="keymap">
+            <span class="button">L</span><span class="key">9</span>
+          </div>
+          <div class="keymap">
+            <span class="button">R</span><span class="key">0</span>
+          </div>
+          <div class="keymap">
+            <span class="button">X</span><span class="key">O</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Y</span><span class="key">P</span>
+          </div>
+          <div class="keymap">
+            <span class="button">A</span><span class="key">K</span>
+          </div>
+          <div class="keymap">
+            <span class="button">B</span><span class="key">L</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Select</span><span class="key">Backspace</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Start</span><span class="key">Enter</span>
+          </div>
         </div>
-        <div data-console="Mega Drive" data-port="Controller Port 1" data-type="Fighting Pad">
-          <div class="keymap"><span class="button">Up</span><span class="key">W</span></div>
-          <div class="keymap"><span class="button">Left</span><span class="key">A</span></div>
-          <div class="keymap"><span class="button">Down</span><span class="key">S</span></div>
-          <div class="keymap"><span class="button">Right</span><span class="key">D</span></div>
-          <div class="keymap"><span class="button">X</span><span class="key">I</span></div>
-          <div class="keymap"><span class="button">Y</span><span class="key">O</span></div>
-          <div class="keymap"><span class="button">Z</span><span class="key">P</span></div>
-          <div class="keymap"><span class="button">A</span><span class="key">J</span></div>
-          <div class="keymap"><span class="button">B</span><span class="key">K</span></div>
-          <div class="keymap"><span class="button">C</span><span class="key">L</span></div>
-          <div class="keymap"><span class="button">Mode</span><span class="key">Backspace</span></div>
-          <div class="keymap"><span class="button">Start</span><span class="key">Enter</span></div>
+        <div
+          data-console="Mega Drive"
+          data-port="Controller Port 1"
+          data-type="Fighting Pad"
+        >
+          <div class="keymap">
+            <span class="button">Up</span><span class="key">W</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Left</span><span class="key">A</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Down</span><span class="key">S</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Right</span><span class="key">D</span>
+          </div>
+          <div class="keymap">
+            <span class="button">X</span><span class="key">I</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Y</span><span class="key">O</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Z</span><span class="key">P</span>
+          </div>
+          <div class="keymap">
+            <span class="button">A</span><span class="key">J</span>
+          </div>
+          <div class="keymap">
+            <span class="button">B</span><span class="key">K</span>
+          </div>
+          <div class="keymap">
+            <span class="button">C</span><span class="key">L</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Mode</span><span class="key">Backspace</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Start</span><span class="key">Enter</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="virtualGamepad" style="opacity: 0.7;">
-      <div class="console" data-console="Famicom" data-orientation="portrait" data-port="Controller Port 1" data-type="Gamepad">
-        <div class="button button_Left" data-label="Left" data-x="12.5" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="37.5" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="25" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="25" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="85" data-y="50"></div>
-        <div class="button button_B" data-label="B" data-x="65" data-y="50"></div>
-        <div class="button button_Select" data-label="Select" data-x="11" data-y="92"></div>
-        <div class="button button_Start" data-label="Start" data-x="94.5" data-y="92"></div>
-        <div class="button button_Microphone" data-label="Microphone" data-x="50" data-y="15">🎤</div>
+    <div id="virtualGamepad" style="opacity: 0.7">
+      <div
+        class="console"
+        data-console="Famicom"
+        data-orientation="portrait"
+        data-port="Controller Port 1"
+        data-type="Gamepad"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="12.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="37.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="25"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="25"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="85"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="65"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Select"
+          data-label="Select"
+          data-x="11"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="94.5"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Microphone"
+          data-label="Microphone"
+          data-x="50"
+          data-y="15"
+        >
+          🎤
+        </div>
       </div>
-      <div class="console" data-console="Famicom" data-orientation="landscape" data-port="Controller Port 1" data-type="Gamepad">
-        <div class="button button_Left" data-label="Left" data-x="6.25" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="18.75" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="12.5" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="12.5" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="92.5" data-y="50"></div>
-        <div class="button button_B" data-label="B" data-x="82.5" data-y="50"></div>
-        <div class="button button_Select" data-label="Select" data-x="5.5" data-y="92"></div>
-        <div class="button button_Start" data-label="Start" data-x="94.5" data-y="92"></div>
-        <div class="button button_Microphone" data-label="Microphone" data-x="87.75" data-y="25">🎤</div>
+      <div
+        class="console"
+        data-console="Famicom"
+        data-orientation="landscape"
+        data-port="Controller Port 1"
+        data-type="Gamepad"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="6.25"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="18.75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="12.5"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="12.5"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="92.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="82.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Select"
+          data-label="Select"
+          data-x="5.5"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="94.5"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Microphone"
+          data-label="Microphone"
+          data-x="87.75"
+          data-y="25"
+        >
+          🎤
+        </div>
       </div>
-      <div class="console" data-console="Super Famicom" data-orientation="portrait" data-port="Controller Port 1" data-type="Gamepad">
-        <div class="button button_Left" data-label="Left" data-x="12.5" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="37.5" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="25" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="25" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="87.5" data-y="50"></div>
-        <div class="button button_B" data-label="B" data-x="75" data-y="66.666"></div>
-        <div class="button button_X" data-label="X" data-x="75" data-y="33.333"></div>
-        <div class="button button_Y" data-label="Y" data-x="62.5" data-y="50"></div>
-        <div class="button button_L" data-label="L" data-x="11" data-y="8"></div>
-        <div class="button button_R" data-label="R" data-x="89" data-y="8"></div>
-        <div class="button button_Select" data-label="Select" data-x="11" data-y="92"></div>
-        <div class="button button_Start" data-label="Start" data-x="89" data-y="92"></div>
+      <div
+        class="console"
+        data-console="Super Famicom"
+        data-orientation="portrait"
+        data-port="Controller Port 1"
+        data-type="Gamepad"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="12.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="37.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="25"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="25"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="87.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="75"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_X"
+          data-label="X"
+          data-x="75"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Y"
+          data-label="Y"
+          data-x="62.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_L"
+          data-label="L"
+          data-x="11"
+          data-y="8"
+        ></div>
+        <div
+          class="button button_R"
+          data-label="R"
+          data-x="89"
+          data-y="8"
+        ></div>
+        <div
+          class="button button_Select"
+          data-label="Select"
+          data-x="11"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="89"
+          data-y="92"
+        ></div>
       </div>
-      <div class="console" data-console="Super Famicom" data-orientation="landscape" data-port="Controller Port 1" data-type="Gamepad">
-        <div class="button button_Left" data-label="Left" data-x="6.25" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="18.75" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="12.5" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="12.5" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="93.75" data-y="50"></div>
-        <div class="button button_B" data-label="B" data-x="87.5" data-y="66.666"></div>
-        <div class="button button_X" data-label="X" data-x="87.5" data-y="33.333"></div>
-        <div class="button button_Y" data-label="Y" data-x="81.25" data-y="50"></div>
-        <div class="button button_L" data-label="L" data-x="5.5" data-y="8"></div>
-        <div class="button button_R" data-label="R" data-x="94.5" data-y="8"></div>
-        <div class="button button_Select" data-label="Select" data-x="5.5" data-y="92"></div>
-        <div class="button button_Start" data-label="Start" data-x="94.5" data-y="92"></div>
+      <div
+        class="console"
+        data-console="Super Famicom"
+        data-orientation="landscape"
+        data-port="Controller Port 1"
+        data-type="Gamepad"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="6.25"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="18.75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="12.5"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="12.5"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="93.75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="87.5"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_X"
+          data-label="X"
+          data-x="87.5"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Y"
+          data-label="Y"
+          data-x="81.25"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_L"
+          data-label="L"
+          data-x="5.5"
+          data-y="8"
+        ></div>
+        <div
+          class="button button_R"
+          data-label="R"
+          data-x="94.5"
+          data-y="8"
+        ></div>
+        <div
+          class="button button_Select"
+          data-label="Select"
+          data-x="5.5"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="94.5"
+          data-y="92"
+        ></div>
       </div>
-      <div class="console" data-console="Mega Drive" data-orientation="portrait" data-port="Controller Port 1" data-type="Fighting Pad" data-layout="md6Buttons">
-        <div class="button button_Left" data-label="Left" data-x="12.5" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="37.5" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="25" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="25" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="67.5" data-y="70"></div>
-        <div class="button button_B" data-label="B" data-x="80" data-y="60"></div>
-        <div class="button button_C" data-label="C" data-x="92.5" data-y="50"></div>
-        <div class="button button_X" data-label="X" data-x="57.5" data-y="50"></div>
-        <div class="button button_Y" data-label="Y" data-x="70" data-y="40"></div>
-        <div class="button button_Z" data-label="Z" data-x="82.5" data-y="30"></div>
-        <div class="button button_Mode" data-label="Mode" data-x="11" data-y="92"></div>
-        <div class="button button_Start" data-label="Start" data-x="89" data-y="92"></div>
+      <div
+        class="console"
+        data-console="Mega Drive"
+        data-orientation="portrait"
+        data-port="Controller Port 1"
+        data-type="Fighting Pad"
+        data-layout="md6Buttons"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="12.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="37.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="25"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="25"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="67.5"
+          data-y="70"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="80"
+          data-y="60"
+        ></div>
+        <div
+          class="button button_C"
+          data-label="C"
+          data-x="92.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_X"
+          data-label="X"
+          data-x="57.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Y"
+          data-label="Y"
+          data-x="70"
+          data-y="40"
+        ></div>
+        <div
+          class="button button_Z"
+          data-label="Z"
+          data-x="82.5"
+          data-y="30"
+        ></div>
+        <div
+          class="button button_Mode"
+          data-label="Mode"
+          data-x="11"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="89"
+          data-y="92"
+        ></div>
       </div>
-      <div class="console" data-console="Mega Drive" data-orientation="landscape" data-port="Controller Port 1" data-type="Fighting Pad" data-layout="md6Buttons">
-        <div class="button button_Left" data-label="Left" data-x="6.25" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="18.75" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="12.5" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="12.5" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="83.75" data-y="70"></div>
-        <div class="button button_B" data-label="B" data-x="90" data-y="60"></div>
-        <div class="button button_C" data-label="C" data-x="96.25" data-y="50"></div>
-        <div class="button button_X" data-label="X" data-x="78.75" data-y="50"></div>
-        <div class="button button_Y" data-label="Y" data-x="85" data-y="40"></div>
-        <div class="button button_Z" data-label="Z" data-x="91.25" data-y="30"></div>
-        <div class="button button_Mode" data-label="Mode" data-x="5.5" data-y="92"></div>
-        <div class="button button_Start" data-label="Start" data-x="94.5" data-y="92"></div>
+      <div
+        class="console"
+        data-console="Mega Drive"
+        data-orientation="landscape"
+        data-port="Controller Port 1"
+        data-type="Fighting Pad"
+        data-layout="md6Buttons"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="6.25"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="18.75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="12.5"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="12.5"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="83.75"
+          data-y="70"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="90"
+          data-y="60"
+        ></div>
+        <div
+          class="button button_C"
+          data-label="C"
+          data-x="96.25"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_X"
+          data-label="X"
+          data-x="78.75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Y"
+          data-label="Y"
+          data-x="85"
+          data-y="40"
+        ></div>
+        <div
+          class="button button_Z"
+          data-label="Z"
+          data-x="91.25"
+          data-y="30"
+        ></div>
+        <div
+          class="button button_Mode"
+          data-label="Mode"
+          data-x="5.5"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="94.5"
+          data-y="92"
+        ></div>
       </div>
-      <div class="console" data-console="Mega Drive" data-orientation="portrait" data-port="Controller Port 1" data-type="Fighting Pad" data-layout="md3Buttons">
-        <div class="button button_Left" data-label="Left" data-x="12.5" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="37.5" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="25" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="25" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="62.5" data-y="60"></div>
-        <div class="button button_B" data-label="B" data-x="75" data-y="50"></div>
-        <div class="button button_C" data-label="C" data-x="87.5" data-y="40"></div>
-        <div class="button button_Start" data-label="Start" data-x="89" data-y="92"></div>
+      <div
+        class="console"
+        data-console="Mega Drive"
+        data-orientation="portrait"
+        data-port="Controller Port 1"
+        data-type="Fighting Pad"
+        data-layout="md3Buttons"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="12.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="37.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="25"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="25"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="62.5"
+          data-y="60"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_C"
+          data-label="C"
+          data-x="87.5"
+          data-y="40"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="89"
+          data-y="92"
+        ></div>
       </div>
-      <div class="console" data-console="Mega Drive" data-orientation="landscape" data-port="Controller Port 1" data-type="Fighting Pad" data-layout="md3Buttons">
-        <div class="button button_Left" data-label="Left" data-x="6.25" data-y="50"></div>
-        <div class="button button_Right" data-label="Right" data-x="18.75" data-y="50"></div>
-        <div class="button button_Up" data-label="Up" data-x="12.5" data-y="33.333"></div>
-        <div class="button button_Down" data-label="Down" data-x="12.5" data-y="66.666"></div>
-        <div class="button button_A" data-label="A" data-x="81.25" data-y="60"></div>
-        <div class="button button_B" data-label="B" data-x="87.5" data-y="50"></div>
-        <div class="button button_C" data-label="C" data-x="93.75" data-y="40"></div>
-        <div class="button button_Start" data-label="Start" data-x="94.5" data-y="92"></div>
+      <div
+        class="console"
+        data-console="Mega Drive"
+        data-orientation="landscape"
+        data-port="Controller Port 1"
+        data-type="Fighting Pad"
+        data-layout="md3Buttons"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="6.25"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="18.75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="12.5"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="12.5"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="81.25"
+          data-y="60"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="87.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_C"
+          data-label="C"
+          data-x="93.75"
+          data-y="40"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="94.5"
+          data-y="92"
+        ></div>
       </div>
     </div>
 
-    <script type='text/javascript'>
+    <script type="text/javascript">
       // Where to store the last game in local storage
-      const LAST_GAME = 'last-game';
+      const LAST_GAME = "last-game";
 
       // DOM elements
-      const canvas = document.getElementById('canvas');
+      const canvas = document.getElementById("canvas");
       const getContext = canvas.getContext.bind(canvas);
-      canvas.getContext = function(contextId, options) {
-        if (contextId === 'webgl') {
+      canvas.getContext = function (contextId, options) {
+        if (contextId === "webgl") {
           Object.assign(options, {
             // Required to enable screenshots
             preserveDrawingBuffer: true,
             // Optimize for performance
-            powerPreference: 'high-performance',
+            powerPreference: "high-performance",
             desynchronized: true,
             alpha: false,
             antialias: false,
           });
         }
-        
-        return getContext(contextId, options);
-      }
-      const mainElement = document.getElementById('main');
-      const displayElement = document.getElementById('display');
-      const gameLoadingElement = document.getElementById('game-loading');
-      const notificationBoxContainerElement = document.querySelector('#notification-box .container');
 
-      const statusElement = document.getElementById('status');
-      const spinnerElement = document.getElementById('spinner');
-      const overlayElement = document.getElementById('overlay');
-      const keymapsElement = document.getElementById('keymaps');
-      const fpsWrapper = document.getElementById('fpsWrapper');
-      const pauseMenu = document.getElementById('pauseMenu');
-      const pauseMenuButton = document.getElementById('pauseMenuButton');
-      const closePauseMenuButton = document.getElementById('closePauseMenuButton');
-      const virtualGamepadElement = document.getElementById('virtualGamepad');
-      
+        return getContext(contextId, options);
+      };
+      const mainElement = document.getElementById("main");
+      const displayElement = document.getElementById("display");
+      const gameLoadingElement = document.getElementById("game-loading");
+      const notificationBoxContainerElement = document.querySelector(
+        "#notification-box .container"
+      );
+
+      const statusElement = document.getElementById("status");
+      const spinnerElement = document.getElementById("spinner");
+      const overlayElement = document.getElementById("overlay");
+      const keymapsElement = document.getElementById("keymaps");
+      const fpsWrapper = document.getElementById("fpsWrapper");
+      const pauseMenu = document.getElementById("pauseMenu");
+      const pauseMenuButton = document.getElementById("pauseMenuButton");
+      const closePauseMenuButton = document.getElementById(
+        "closePauseMenuButton"
+      );
+      const virtualGamepadElement = document.getElementById("virtualGamepad");
+
       let cpuprofilerElement = false;
       const fpsMeter = new FPSMeter(fpsWrapper, {
-        theme: 'dark',
-        position: 'relative',
-        left: '0',
-        top: '0',
-        interval: 1000, 
+        theme: "dark",
+        position: "relative",
+        left: "0",
+        top: "0",
+        interval: 1000,
         decimals: 0,
         heat: 1,
         graph: 1,
-        history: 10
+        history: 10,
       });
 
-      const select = document.getElementById('game-selector');
-      const startButton = document.getElementById('start');
-      const fullscreenButton = document.getElementById('fullscreen');
-      const pauseButton = document.getElementById('pause');
-      const saveStateButton = document.getElementById('save-state');
-      const loadStateButton = document.getElementById('load-state');
-      const settingsButton = document.getElementById('settings');
-      const showProfilerButton = document.getElementById('show-profiler');
-      const toggleKeymapButton = document.getElementById('toggle-keymap');
-      const settingsAreaElement = document.getElementById('settingsArea');
+      const select = document.getElementById("game-selector");
+      const startButton = document.getElementById("start");
+      const fullscreenButton = document.getElementById("fullscreen");
+      const pauseButton = document.getElementById("pause");
+      const saveStateButton = document.getElementById("save-state");
+      const loadStateButton = document.getElementById("load-state");
+      const settingsButton = document.getElementById("settings");
+      const showProfilerButton = document.getElementById("show-profiler");
+      const toggleKeymapButton = document.getElementById("toggle-keymap");
+      const settingsAreaElement = document.getElementById("settingsArea");
 
-      const gameFiles = document.getElementById('game-files');
+      const gameFiles = document.getElementById("game-files");
 
       const settings = {
-        touchArea: 'full',
-        specialLayout: 'md6Buttons',
+        touchArea: "full",
+        specialLayout: "md6Buttons",
       };
 
       const vGamepad = {
@@ -1193,11 +2199,11 @@
 
             buttonIds.forEach((buttonId) => {
               Module.setButton(vGamepad.port, buttonId, 1);
-              vGamepad.buttonElements[buttonId].classList.add('pressed');
+              vGamepad.buttonElements[buttonId].classList.add("pressed");
             });
 
             vGamepad.touchInfos[touch.identifier] = {
-              buttonIds
+              buttonIds,
             };
           }
         },
@@ -1217,11 +2223,13 @@
             if (newButtonIds.length > 0 || oldButtonIds.length > 0) {
               oldButtonIds.forEach((oldButtonId) => {
                 Module.setButton(vGamepad.port, oldButtonId, 0);
-                vGamepad.buttonElements[oldButtonId].classList.remove('pressed');
+                vGamepad.buttonElements[oldButtonId].classList.remove(
+                  "pressed"
+                );
               });
-              newButtonIds.forEach(newButtonId => {
+              newButtonIds.forEach((newButtonId) => {
                 Module.setButton(vGamepad.port, newButtonId, 1);
-                vGamepad.buttonElements[newButtonId].classList.add('pressed');
+                vGamepad.buttonElements[newButtonId].classList.add("pressed");
               });
 
               infos.buttonIds = newIds;
@@ -1238,24 +2246,26 @@
 
             let buttonIds = vGamepad.getButtonId(touch);
 
-            buttonIds.forEach(buttonId => {
+            buttonIds.forEach((buttonId) => {
               Module.setButton(vGamepad.port, buttonId, 0);
-              vGamepad.buttonElements[buttonId].classList.remove('pressed');
+              vGamepad.buttonElements[buttonId].classList.remove("pressed");
             });
           }
         },
         getButtonId: (touch) => {
           let pressedButtons = [];
           const rect = touch.target.getBoundingClientRect();
-          const x = 100 * (touch.clientX - rect.left) / rect.width;
-          const y = 100 * (touch.clientY - rect.top) / rect.height;
+          const x = (100 * (touch.clientX - rect.left)) / rect.width;
+          const y = (100 * (touch.clientY - rect.top)) / rect.height;
 
           const yScale = device.isLandscape ? 2.666 : 1.333;
           const buttonRadius = device.isLandscape ? 2.5 : 5;
 
-          if (settings.touchArea === 'narrow') {
+          if (settings.touchArea === "narrow") {
             // narrow area: can touch only visible part of button
-            for (const [key, value] of Object.entries(vGamepad.displayButtons)) {
+            for (const [key, value] of Object.entries(
+              vGamepad.displayButtons
+            )) {
               const diffX = value.x - x;
               const diffY = (value.y - y) / yScale;
               const distance = Math.sqrt(diffX * diffX + diffY * diffY);
@@ -1263,9 +2273,11 @@
                 pressedButtons.push(key);
               }
             }
-          } else if (settings.touchArea === 'wide') {
+          } else if (settings.touchArea === "wide") {
             // wide area: can touch a larger radius around visible part of button, allowing pressing multiple buttons simultaneously
-            for (const [key, value] of Object.entries(vGamepad.displayButtons)) {
+            for (const [key, value] of Object.entries(
+              vGamepad.displayButtons
+            )) {
               const diffX = value.x - x;
               const diffY = (value.y - y) / yScale;
               const distance = Math.sqrt(diffX * diffX + diffY * diffY);
@@ -1273,19 +2285,27 @@
                 pressedButtons.push(key);
               }
             }
-          } else if (settings.touchArea === 'full') {
+          } else if (settings.touchArea === "full") {
             // full area: can touch anywhere around buttons (no dead-zone)
             let dpadArea = false;
             let dpadAngle = 0;
 
             // get center of d-pad
-            const dPadX = (vGamepad.displayButtons['Left'].x + vGamepad.displayButtons['Right'].x) / 2;
-            const dPadY = (vGamepad.displayButtons['Up'].y + vGamepad.displayButtons['Down'].y) / 2;
+            const dPadX =
+              (vGamepad.displayButtons["Left"].x +
+                vGamepad.displayButtons["Right"].x) /
+              2;
+            const dPadY =
+              (vGamepad.displayButtons["Up"].y +
+                vGamepad.displayButtons["Down"].y) /
+              2;
             const dPadDiffX = x - dPadX;
             const dPadDiffY = (y - dPadY) / yScale;
-            const dPadDistance = Math.sqrt(dPadDiffX * dPadDiffX + dPadDiffY * dPadDiffY);
+            const dPadDistance = Math.sqrt(
+              dPadDiffX * dPadDiffX + dPadDiffY * dPadDiffY
+            );
             dpadAngle = Math.atan2(dPadDiffY, dPadDiffX);
-            dpadArea = (dPadDistance < buttonRadius * 5);
+            dpadArea = dPadDistance < buttonRadius * 5;
 
             if (dpadArea) {
               // touch the d-pad area
@@ -1293,8 +2313,10 @@
             } else {
               // touch far from the d-pad area, choose any nearest button
               let minDistance = 100;
-              let nearestButton = '';
-              for (const [key, value] of Object.entries(vGamepad.displayButtons)) {
+              let nearestButton = "";
+              for (const [key, value] of Object.entries(
+                vGamepad.displayButtons
+              )) {
                 const diffX = value.x - x;
                 const diffY = (value.y - y) / yScale;
                 const distance = Math.sqrt(diffX * diffX + diffY * diffY);
@@ -1313,225 +2335,262 @@
           const PI = Math.PI;
           // 8 directions allowed
           if (angle < PI / 6 && angle > -PI / 6) {
-            return ['Right'];
-          } else if (angle >= PI / 6 && angle < 2 * PI / 6) {
-            return ['Right', 'Down'];
-          } else if (angle >= 2 * PI / 6 && angle < 4 * PI / 6) {
-            return ['Down'];
-          } else if (angle >= 4 * PI / 6 && angle < 5 * PI / 6) {
-            return ['Left', 'Down'];
-          } else if (angle <= -PI / 6 && angle > -2 * PI / 6) {
-            return ['Right', 'Up'];
-          } else if (angle <= -2 * PI / 6 && angle > -4 * PI / 6) {
-            return ['Up'];
-          } else if (angle <= -4 * PI / 6 && angle > -5 * PI / 6) {
-            return ['Left', 'Up'];
+            return ["Right"];
+          } else if (angle >= PI / 6 && angle < (2 * PI) / 6) {
+            return ["Right", "Down"];
+          } else if (angle >= (2 * PI) / 6 && angle < (4 * PI) / 6) {
+            return ["Down"];
+          } else if (angle >= (4 * PI) / 6 && angle < (5 * PI) / 6) {
+            return ["Left", "Down"];
+          } else if (angle <= -PI / 6 && angle > (-2 * PI) / 6) {
+            return ["Right", "Up"];
+          } else if (angle <= (-2 * PI) / 6 && angle > (-4 * PI) / 6) {
+            return ["Up"];
+          } else if (angle <= (-4 * PI) / 6 && angle > (-5 * PI) / 6) {
+            return ["Left", "Up"];
           } else {
-            return ['Left'];
+            return ["Left"];
           }
-        }
-
-      }
+        },
+      };
 
       // Basic mobile device detection
       const device = {
         isMobile: false,
         isLandscape: false,
         check: function () {
-          this.isLandscape = window.matchMedia('(orientation: landscape)').matches;
+          this.isLandscape = window.matchMedia(
+            "(orientation: landscape)"
+          ).matches;
           this.isMobile = false;
-          (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) device.isMobile = true;})(navigator.userAgent||navigator.vendor||window.opera);
-        }
-      }
+          (function (a) {
+            if (
+              /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
+                a
+              ) ||
+              /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+                a.substr(0, 4)
+              )
+            )
+              device.isMobile = true;
+          })(navigator.userAgent || navigator.vendor || window.opera);
+        },
+      };
       device.check();
 
       if (device.isMobile) {
         // prevent accidental pinch gestures
-        document.addEventListener('gesturestart', (e) => e.preventDefault());
-        document.body.classList.add('mobile');
+        document.addEventListener("gesturestart", (e) => e.preventDefault());
+        document.body.classList.add("mobile");
 
-        virtualGamepadElement.addEventListener('touchstart', vGamepad.onTouchStart);
-        virtualGamepadElement.addEventListener('touchmove', vGamepad.onTouchMove);
-        virtualGamepadElement.addEventListener('touchend', vGamepad.onTouchEnd);
+        virtualGamepadElement.addEventListener(
+          "touchstart",
+          vGamepad.onTouchStart
+        );
+        virtualGamepadElement.addEventListener(
+          "touchmove",
+          vGamepad.onTouchMove
+        );
+        virtualGamepadElement.addEventListener("touchend", vGamepad.onTouchEnd);
       }
 
       // Devtool detection
       // Todo: does not work when device toolbar is on or if devtools are undocked.
-      const devtools = { 
+      const devtools = {
         enabled: false,
         check: function () {
           const { outerHeight, innerHeight, outerWidth, innerWidth } = window;
-          if(outerHeight - innerHeight > 400 || outerWidth - innerWidth > 100) {
+          if (
+            outerHeight - innerHeight > 400 ||
+            outerWidth - innerWidth > 100
+          ) {
             if (!this.enabled) {
-              console.log('Devtools enabled');
+              console.log("Devtools enabled");
             }
             this.enabled = true;
           } else {
             if (this.enabled) {
-              console.log('Devtools disabled');
+              console.log("Devtools disabled");
             }
-            this.enabled = false
+            this.enabled = false;
           }
-        }
+        },
       };
       devtools.check();
 
       // Check if anything changed on resize
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         device.check();
         devtools.check();
         if (device.isMobile) {
-          document.body.classList.add('mobile');
+          document.body.classList.add("mobile");
         } else {
-          document.body.classList.remove('mobile');
+          document.body.classList.remove("mobile");
         }
         resizeVideo();
       });
-      window.addEventListener('orientationchange', resizeVideo);
+      window.addEventListener("orientationchange", resizeVideo);
 
-      // Settings 
+      // Settings
       function configureEmulatorCore(id, value) {
-        const [core, ...rest] = id.split('-');
-        const name = rest.join('-');
+        const [core, ...rest] = id.split("-");
+        const name = rest.join("-");
 
         switch (core) {
-          case 'sfc':
+          case "sfc":
             switch (name) {
-              case 'lockstep': 
-                Module.configure('cpu/lockstep', value);
-                Module.configure('smp/lockstep', value);
+              case "lockstep":
+                Module.configure("cpu/lockstep", value);
+                Module.configure("smp/lockstep", value);
                 return true;
-              case 'fastmath':
-                Module.configure('cpu/fastmath', value);
+              case "fastmath":
+                Module.configure("cpu/fastmath", value);
                 return true;
-              case 'cpu-overclock':
-                Module.configure('cpu/overclock', parseFloat(value));
+              case "cpu-overclock":
+                Module.configure("cpu/overclock", parseFloat(value));
                 return true;
-              case 'dsp-overclock':
-                Module.configure('dsp/overclock', parseFloat(value));
+              case "dsp-overclock":
+                Module.configure("dsp/overclock", parseFloat(value));
                 return true;
-              case 'ppu-overclock':
-                Module.configure('ppu/overclock', parseFloat(value));
+              case "ppu-overclock":
+                Module.configure("ppu/overclock", parseFloat(value));
                 return true;
-              case 'dsp':
-                Module.configure('dsp/enabled', value);
+              case "dsp":
+                Module.configure("dsp/enabled", value);
                 return true;
-              case 'skipframe':
-                Module.configure('ppu/skipframe', value);
+              case "skipframe":
+                Module.configure("ppu/skipframe", value);
                 return true;
             }
             return false;
-          case 'fc':
+          case "fc":
             switch (name) {
-              case 'mic':
-                virtualGamepad.querySelectorAll('[data-console="Famicom"]').forEach((pad) => {
-                  pad.querySelector('.button_Microphone').style.display = value ? 'block' : 'none';
-                });
+              case "mic":
+                virtualGamepad
+                  .querySelectorAll('[data-console="Famicom"]')
+                  .forEach((pad) => {
+                    pad.querySelector(".button_Microphone").style.display =
+                      value ? "block" : "none";
+                  });
                 return true;
-              case 'overclock':
-                Module.configure('cpu/overclock', parseFloat(value));
+              case "overclock":
+                Module.configure("cpu/overclock", parseFloat(value));
                 return true;
-              case 'synconce':
-                Module.configure('cpu/synconce', value);
+              case "synconce":
+                Module.configure("cpu/synconce", value);
                 return true;
-              case 'overscan':
-                Module.configure('ppu/overscan', value);
+              case "overscan":
+                Module.configure("ppu/overscan", value);
                 return true;
-              case 'skipframe':
-                Module.configure('ppu/skipframe', value);
+              case "skipframe":
+                Module.configure("ppu/skipframe", value);
                 return true;
             }
-            case 'md':
+          case "md":
             switch (name) {
-              case 'cpu-overclock':
-                Module.configure('cpu/overclock', parseFloat(value));
+              case "cpu-overclock":
+                Module.configure("cpu/overclock", parseFloat(value));
                 return true;
-              case 'apu-overclock':
-                Module.configure('apu/overclock', parseFloat(value));
+              case "apu-overclock":
+                Module.configure("apu/overclock", parseFloat(value));
                 return true;
-              case 'vdp-overclock':
-                Module.configure('vdp/overclock', parseFloat(value));
+              case "vdp-overclock":
+                Module.configure("vdp/overclock", parseFloat(value));
                 return true;
-              case 'skipframe':
-                Module.configure('vdp/skipframe', value);
+              case "skipframe":
+                Module.configure("vdp/skipframe", value);
                 return true;
             }
             return false;
         }
       }
-      document.forms.settingsForm.addEventListener('change', ({ target: { name, value , checked } }) => {      
-        switch (name) {
-          case 'gamepadOpacity':
-            virtualGamepadElement.style.opacity = value;
-            break;
-          case 'gamepadColored':
-            if (value === 'on') {
-              virtualGamepadElement.classList.add('colored');
-            } else {
-              virtualGamepadElement.classList.remove('colored');
-            }
-            break;
-          case 'gamepadPosition':
-            if (value === 'high') {
-              virtualGamepadElement.classList.add('position_high');
-            } else {
-              virtualGamepadElement.classList.remove('position_high');
-            }
-            break;
-          case 'specialLayout':
-            settings.specialLayout = value;
-            if (value === 'md3Buttons') {
-              virtualGamepadElement.classList.add('md3Buttons');
-            } else {
-              virtualGamepadElement.classList.remove('md3Buttons');
-            }
-            displayControllerForEmulator();
-            break;
-          case 'touchArea':
-            settings.touchArea = value;
-            break;
-          case 'volume':
-            Module.setVolume(parseInt(value, 10));
-            break;
-          case 'mute':
-            Module.setMute(checked);
-            break;
-          case 'dsp':
-            Module.setMute(checked);
-            break;
-          case 'fps':
-            document.getElementById('fpsWrapper').style.display = checked ? 'block' : 'none';
-            break;
-          default:
-            if (!configureEmulatorCore(name, checked !== undefined ? checked : value)) {
-              console.log('received unknown settings change event:', name, value);
-            }
+      document.forms.settingsForm.addEventListener(
+        "change",
+        ({ target: { name, value, checked } }) => {
+          switch (name) {
+            case "gamepadOpacity":
+              virtualGamepadElement.style.opacity = value;
+              break;
+            case "gamepadColored":
+              if (value === "on") {
+                virtualGamepadElement.classList.add("colored");
+              } else {
+                virtualGamepadElement.classList.remove("colored");
+              }
+              break;
+            case "gamepadPosition":
+              if (value === "high") {
+                virtualGamepadElement.classList.add("position_high");
+              } else {
+                virtualGamepadElement.classList.remove("position_high");
+              }
+              break;
+            case "specialLayout":
+              settings.specialLayout = value;
+              if (value === "md3Buttons") {
+                virtualGamepadElement.classList.add("md3Buttons");
+              } else {
+                virtualGamepadElement.classList.remove("md3Buttons");
+              }
+              displayControllerForEmulator();
+              break;
+            case "touchArea":
+              settings.touchArea = value;
+              break;
+            case "volume":
+              Module.setVolume(parseInt(value, 10));
+              break;
+            case "mute":
+              Module.setMute(checked);
+              break;
+            case "dsp":
+              Module.setMute(checked);
+              break;
+            case "fps":
+              document.getElementById("fpsWrapper").style.display = checked
+                ? "block"
+                : "none";
+              break;
+            default:
+              if (
+                !configureEmulatorCore(
+                  name,
+                  checked !== undefined ? checked : value
+                )
+              ) {
+                console.log(
+                  "received unknown settings change event:",
+                  name,
+                  value
+                );
+              }
+          }
         }
-      });
+      );
 
       // Local database
-      let db; 
+      let db;
 
       async function openApplicationDatabase() {
         return new Promise((resolve, reject) => {
-          const request = indexedDB.open('application', 2);
-          request.onerror = ({ target: { errorCode }}) => reject(errorCode);
-          
-          request.onupgradeneeded = ({ target: { result: db }}) =>  { 
-            if (!db.objectStoreNames.contains('roms')) {
-              db.createObjectStore('roms', { keyPath: 'filename' });
+          const request = indexedDB.open("application", 2);
+          request.onerror = ({ target: { errorCode } }) => reject(errorCode);
+
+          request.onupgradeneeded = ({ target: { result: db } }) => {
+            if (!db.objectStoreNames.contains("roms")) {
+              db.createObjectStore("roms", { keyPath: "filename" });
             }
 
-            if (!db.objectStoreNames.contains('saves')) {
-              db.createObjectStore('saves', { keyPath: 'filename' });
+            if (!db.objectStoreNames.contains("saves")) {
+              db.createObjectStore("saves", { keyPath: "filename" });
             }
 
-            if (!db.objectStoreNames.contains('states')) {
-              db.createObjectStore('states', { keyPath: 'id' });
+            if (!db.objectStoreNames.contains("states")) {
+              db.createObjectStore("states", { keyPath: "id" });
             }
           };
 
-          request.onsuccess = ({ target: { result }}) => {
+          request.onsuccess = ({ target: { result } }) => {
             db = result;
             resolve();
           };
@@ -1541,38 +2600,41 @@
       async function addGame(filename, romData) {
         const info = Module.getROMInfo(filename, romData);
         if (!info) {
-          throw new Error('ROM is invalid');
+          throw new Error("ROM is invalid");
         }
 
-        const { emulator, rom: [{ children }] } = info;
+        const {
+          emulator,
+          rom: [{ children }],
+        } = info;
         function getNodeValue(key) {
           const node = children.find(({ name }) => name === key);
           if (node) {
             return node.value;
           }
 
-          return '';
+          return "";
         }
 
-        const name = getNodeValue('name');
-        const label = getNodeValue('label');
-        const title = getNodeValue('title');
+        const name = getNodeValue("name");
+        const label = getNodeValue("label");
+        const title = getNodeValue("title");
         const gameRecord = {
           filename,
           name,
-          label, 
+          label,
           title,
           emulator: emulator.name,
-          romData
+          romData,
         };
 
         selectEmulator(filename);
 
         return new Promise((resolve, reject) => {
-          const tx = db.transaction(['roms'], 'readwrite');
+          const tx = db.transaction(["roms"], "readwrite");
           tx.onerror = reject;
 
-          const store = tx.objectStore('roms');
+          const store = tx.objectStore("roms");
           const request = store.add(gameRecord);
           request.onsuccess = () => resolve(gameRecord);
         });
@@ -1580,10 +2642,10 @@
 
       async function getGame(filename) {
         return new Promise((resolve, reject) => {
-          const tx = db.transaction(['roms'], 'readonly');
+          const tx = db.transaction(["roms"], "readonly");
           tx.onerror = reject;
 
-          const store = tx.objectStore('roms');
+          const store = tx.objectStore("roms");
           const request = store.get(filename);
           request.onsuccess = () => resolve(request.result);
         });
@@ -1591,10 +2653,10 @@
 
       async function listGames() {
         return new Promise((resolve, reject) => {
-          const tx = db.transaction(['roms'], 'readonly');
+          const tx = db.transaction(["roms"], "readonly");
           tx.onerror = reject;
 
-          const store = tx.objectStore('roms');
+          const store = tx.objectStore("roms");
           const request = store.getAll();
           request.onsuccess = () => resolve(request.result);
         });
@@ -1602,10 +2664,10 @@
 
       async function storeState(filename, index, stateData) {
         return new Promise((resolve, reject) => {
-          const tx = db.transaction(['states'], 'readwrite');
+          const tx = db.transaction(["states"], "readwrite");
           tx.onerror = reject;
 
-          const store = tx.objectStore('states');
+          const store = tx.objectStore("states");
           const request = store.put({
             id: `${filename}:${index}`,
             state: stateData,
@@ -1616,21 +2678,22 @@
 
       async function getState(filename, index) {
         return new Promise((resolve, reject) => {
-          const tx = db.transaction(['states'], 'readonly');
+          const tx = db.transaction(["states"], "readonly");
           tx.onerror = reject;
 
-          const store = tx.objectStore('states');
+          const store = tx.objectStore("states");
           const request = store.get(`${filename}:${index}`);
-          request.onsuccess = () => resolve(request.result && request.result.state);
+          request.onsuccess = () =>
+            resolve(request.result && request.result.state);
         });
       }
 
       async function storeSave(filename, saveData) {
         return new Promise((resolve, reject) => {
-          const tx = db.transaction(['saves'], 'readwrite');
+          const tx = db.transaction(["saves"], "readwrite");
           tx.onerror = reject;
 
-          const store = tx.objectStore('saves');
+          const store = tx.objectStore("saves");
           const request = store.put({
             filename,
             data: saveData,
@@ -1641,12 +2704,13 @@
 
       async function getSave(filename) {
         return new Promise((resolve, reject) => {
-          const tx = db.transaction(['saves'], 'readonly');
+          const tx = db.transaction(["saves"], "readonly");
           tx.onerror = reject;
 
-          const store = tx.objectStore('saves');
+          const store = tx.objectStore("saves");
           const request = store.get(filename);
-          request.onsuccess = () => resolve(request.result && request.result.data);
+          request.onsuccess = () =>
+            resolve(request.result && request.result.data);
         });
       }
 
@@ -1667,12 +2731,12 @@
             await openApplicationDatabase();
           } catch (error) {
             console.error(error);
-            Module.setStatus('Failed to open database, see JavaScript console');
+            Module.setStatus("Failed to open database, see JavaScript console");
             return;
           }
 
-          pauseMenuButton.addEventListener('click', togglePauseMenu);
-          closePauseMenuButton.addEventListener('click', togglePauseMenu);
+          pauseMenuButton.addEventListener("click", togglePauseMenu);
+          closePauseMenuButton.addEventListener("click", togglePauseMenu);
 
           // Initialize the emulator platform
           Module.initialize(document.title);
@@ -1691,37 +2755,53 @@
           // As a default initial behavior, pop up an alert when webgl context is lost. To make your
           // application robust, you may want to override this behavior before shipping!
           // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
-          canvas.addEventListener('webglcontextlost', function(e) { 
-            Module.setStatus('WebGL context lost. You will need to reload the page.'); 
-            e.preventDefault(); 
-          }, false);
+          canvas.addEventListener(
+            "webglcontextlost",
+            function (e) {
+              Module.setStatus(
+                "WebGL context lost. You will need to reload the page."
+              );
+              e.preventDefault();
+            },
+            false
+          );
 
           populateSelectGameList();
 
           // Add games
-          gameFiles.addEventListener('change', ({ target: { files } }) => addROMFiles(files));
-          
+          gameFiles.addEventListener("change", ({ target: { files } }) =>
+            addROMFiles(files)
+          );
+
           // Start, pause, resume...
-          select.addEventListener('change', () => selectEmulator(select.value));
-          startButton.addEventListener('click', () => startGame(select.value));
-          pauseButton.addEventListener('click', () => pauseOrResumeGame());
+          select.addEventListener("change", () => selectEmulator(select.value));
+          startButton.addEventListener("click", () => startGame(select.value));
+          pauseButton.addEventListener("click", () => pauseOrResumeGame());
 
           // We have many save slots, for now we only use one
-          saveStateButton.addEventListener('click', () => stateSave(Module.info.currentGame, 1));
-          loadStateButton.addEventListener('click', () => stateLoad(Module.info.currentGame, 1));
-          
+          saveStateButton.addEventListener("click", () =>
+            stateSave(Module.info.currentGame, 1)
+          );
+          loadStateButton.addEventListener("click", () =>
+            stateLoad(Module.info.currentGame, 1)
+          );
+
           // Save running game before unload
           // Todo: find a surefire way to save!
-          window.addEventListener('beforeunload', async () => {
+          window.addEventListener("beforeunload", async () => {
             if (Module.info.isRunning) {
-                await gameSave(Module.info.currentGame);
+              await gameSave(Module.info.currentGame);
             }
-          })
+          });
 
           // Remove fullscreen button if not supported by device (iPhone)
           if (document.body.requestFullscreen) {
-            fullscreenButton.addEventListener('click', () => toggleFullscreen());
-            document.addEventListener('fullscreenchange', () => adjustScreenDisplay());
+            fullscreenButton.addEventListener("click", () =>
+              toggleFullscreen()
+            );
+            document.addEventListener("fullscreenchange", () =>
+              adjustScreenDisplay()
+            );
           } else {
             fullscreenButton.parentElement.removeChild(fullscreenButton);
           }
@@ -1730,14 +2810,18 @@
           if (device.isMobile) {
             toggleKeymapButton.parentElement.removeChild(toggleKeymapButton);
           } else {
-            toggleKeymapButton.addEventListener('click', () => toggleKeymap());
+            toggleKeymapButton.addEventListener("click", () => toggleKeymap());
           }
 
           // Toggle profiler if present
-          showProfilerButton.addEventListener('click', () => cpuprofilerElement.classList.toggle('show'));
+          showProfilerButton.addEventListener("click", () =>
+            cpuprofilerElement.classList.toggle("show")
+          );
 
           // Settings
-          settingsButton.addEventListener('click', () => settingsAreaElement.classList.toggle('show'));
+          settingsButton.addEventListener("click", () =>
+            settingsAreaElement.classList.toggle("show")
+          );
 
           // Everything is ready, show the screen
           hideOverlay();
@@ -1747,62 +2831,67 @@
         printErr: (...args) => console.error(...args),
         canvas,
         totalDependencies: 0,
-        monitorRunDependencies: function(_left) {
-          Module.setStatus(`Preparing`)
+        monitorRunDependencies: function (_left) {
+          Module.setStatus(`Preparing`);
         },
-        setStatus: function(text) {
-          if (!text || text === 'Running...') {
-            return
+        setStatus: function (text) {
+          if (!text || text === "Running...") {
+            return;
           }
-          
+
           showOverlay();
-          statusElement.innerHTML = text;       
-        }
+          statusElement.innerHTML = text;
+        },
       };
 
       // Window events - handle game on focus/blur, error handling
       // If the button's text is set to "Pause", then this means
       // the game was not paused (and need to be), and that it needs
       // to auto resume when we come back.
-      // 
+      //
       // Note: this functionality is disabled if devtools are open.
       let wasPaused;
-      window.addEventListener('focus', () => {
+      window.addEventListener("focus", () => {
         if (!devtools.enabled && Module.info.isRunning && !wasPaused) {
           setResume();
         }
       });
 
-      window.addEventListener('blur', () => {
+      window.addEventListener("blur", () => {
         if (!devtools.enabled && Module.info.isRunning) {
-          wasPaused = pauseButton.textContent === 'Resume';
+          wasPaused = pauseButton.textContent === "Resume";
 
           if (!wasPaused) {
             setPause();
           }
         }
       });
-      
-      window.onerror = function() {
-        Module.setStatus('Exception thrown, see JavaScript console');
-        spinnerElement.style.display = 'none';
+
+      window.onerror = function () {
+        Module.setStatus("Exception thrown, see JavaScript console");
+        spinnerElement.style.display = "none";
       };
 
       // Make ther CPU profiler toggleable, or hide the profiler button if
       // the profiler is not present
       function configureCPUProfiler() {
-        const lastElement = document.querySelector('body > div:last-child');
+        const lastElement = document.querySelector("body > div:last-child");
 
-        if (lastElement && lastElement.innerText.substring(0,12) === 'Cpu Profiler') {
+        if (
+          lastElement &&
+          lastElement.innerText.substring(0, 12) === "Cpu Profiler"
+        ) {
           cpuprofilerElement = lastElement;
-          cpuprofilerElement.id = 'cpuprofiler';
-          cpuprofilerElement.addEventListener('touchstart', () => cpuprofilerElement.classList.toggle('show'));
+          cpuprofilerElement.id = "cpuprofiler";
+          cpuprofilerElement.addEventListener("touchstart", () =>
+            cpuprofilerElement.classList.toggle("show")
+          );
 
-          // Move the element into the display element to make it available 
+          // Move the element into the display element to make it available
           // during fullscreen sessions (also looks a bit more even across supported platforms)
           displayElement.appendChild(cpuprofilerElement);
         } else {
-          showProfilerButton.style.display = 'none';
+          showProfilerButton.style.display = "none";
         }
       }
 
@@ -1811,30 +2900,43 @@
         let addedCount = 0;
 
         for (const file of files) {
-          if (Module.getEmulatorForFilename(file.name.toLowerCase()) === '') {
-            notify(`
+          if (Module.getEmulatorForFilename(file.name.toLowerCase()) === "") {
+            notify(
+              `
               <h1>💀Invalid ROM file</h1>
               <p>
                 ${file.name} is not a supported ROM file
               </p>
-            `, 'danger', 5000);
+            `,
+              "danger",
+              5000
+            );
             continue;
           }
 
           await new Promise((resolve) => {
             const reader = new FileReader();
             reader.onload = async () => {
-              const { name, title, emulator } = await addGame(file.name, reader.result);
+              const { name, title, emulator } = await addGame(
+                file.name,
+                reader.result
+              );
               addGameToSelectList(title || name, file.name);
 
               if (files.length === 1) {
-                notify(`
+                notify(
+                  `
                   <h1>🎮Game added</h1>
                   <p>
-                    ${title || name} (file ${file.name}) for <strong>${emulator}</strong> 
+                    ${title || name} (file ${
+                    file.name
+                  }) for <strong>${emulator}</strong> 
                     was successfully added to your list of games
                   </p>
-                `, 'success', 5000);
+                `,
+                  "success",
+                  5000
+                );
               }
               resolve();
             };
@@ -1845,18 +2947,22 @@
         }
 
         if (files.length > 1) {
-          notify(`
+          notify(
+            `
             <h1>🎮Games added</h1>
             <p>
               <strong>${addedCount} ROMs</strong> were added to your collection
             </p>
-          `, 'success', 5000);
+          `,
+            "success",
+            5000
+          );
         }
       }
 
       // Fill in the UI's game selection list
       function addGameToSelectList(displayName, filename) {
-        const option = document.createElement('option');
+        const option = document.createElement("option");
         option.innerHTML = `${displayName} (${filename})`;
         option.value = filename;
         select.appendChild(option);
@@ -1866,15 +2972,21 @@
       async function populateSelectGameList() {
         const games = await listGames();
         if (games.length === 0) {
-          return notify(`
+          return notify(
+            `
             <h1>👋First time around?</h1>
             <p>
               Click <strong>Add ROMs</strong> to get started
             </p>
-          `, 'success', 5000);
+          `,
+            "success",
+            5000
+          );
         }
 
-        games.forEach(({ title, name, filename }) => addGameToSelectList(title || name, filename));
+        games.forEach(({ title, name, filename }) =>
+          addGameToSelectList(title || name, filename)
+        );
 
         const lastGame = localStorage.getItem(LAST_GAME);
 
@@ -1884,19 +2996,18 @@
         }
       }
 
-      
       // Manage fullscreen
       function adjustScreenDisplay() {
         if (document.fullscreenElement) {
           if (!device.isMobile) {
-            document.body.classList.add('fullscreen');
+            document.body.classList.add("fullscreen");
           }
-          fullscreenButton.textContent = 'Restore';
+          fullscreenButton.textContent = "Restore";
         } else {
           if (!device.isMobile) {
-            document.body.classList.remove('fullscreen');
+            document.body.classList.remove("fullscreen");
           }
-          fullscreenButton.textContent = 'Fullscreen';
+          fullscreenButton.textContent = "Fullscreen";
         }
       }
 
@@ -1918,19 +3029,34 @@
 
       // Show the right controller(s) based on the selected emulator
       function displayControllerForEmulator() {
-        virtualGamepadElement.style.display = 'block';
+        virtualGamepadElement.style.display = "block";
 
-        const controllers = document.querySelectorAll('#virtualGamepad .console');
+        const controllers = document.querySelectorAll(
+          "#virtualGamepad .console"
+        );
         for (const controller of controllers) {
-          const { console: gameConsole, orientation, port, type, layout } = controller.dataset;
-          const currentOrientation = device.isLandscape ? 'landscape' : 'portrait';
-          let isActive = gameConsole == Module.info.currentEmulator && orientation === currentOrientation;
-          if (Module.info.currentEmulator === "Mega Drive" && layout !== settings.specialLayout) {
+          const {
+            console: gameConsole,
+            orientation,
+            port,
+            type,
+            layout,
+          } = controller.dataset;
+          const currentOrientation = device.isLandscape
+            ? "landscape"
+            : "portrait";
+          let isActive =
+            gameConsole == Module.info.currentEmulator &&
+            orientation === currentOrientation;
+          if (
+            Module.info.currentEmulator === "Mega Drive" &&
+            layout !== settings.specialLayout
+          ) {
             isActive = false;
           }
 
           if (isActive) {
-            controller.classList.add('show');
+            controller.classList.add("show");
             Module.connectPeripheral(port, type);
             vGamepad.port = port;
 
@@ -1947,7 +3073,7 @@
               vGamepad.buttonElements[label] = element;
             });
           } else {
-            controller.classList.remove('show');
+            controller.classList.remove("show");
           }
         }
       }
@@ -1955,15 +3081,16 @@
       // Set mapping for the selected keymap
       function setKeymap(keymapElement) {
         // Clear mapping
-        if (this.onKeydown) window.removeEventListener('keydown', this.onKeydown);
-        if (this.onKeyup) window.removeEventListener('keydown', this.onKeyup);
+        if (this.onKeydown)
+          window.removeEventListener("keydown", this.onKeydown);
+        if (this.onKeyup) window.removeEventListener("keydown", this.onKeyup);
 
         // Extract keymap from display
         const { port, type } = keymapElement.dataset;
         const keymap = {};
-        keymapElement.querySelectorAll('.keymap').forEach((map) => {
-          const button = map.querySelector('.button').textContent;
-          let key = map.querySelector('.key').textContent;
+        keymapElement.querySelectorAll(".keymap").forEach((map) => {
+          const button = map.querySelector(".button").textContent;
+          let key = map.querySelector(".key").textContent;
 
           // Single letters will be punched in in lower case
           if (key.length === 1) {
@@ -1975,36 +3102,38 @@
 
         // Connect peripheral to device and map keys
         Module.connectPeripheral(port, type);
-        this.onKeydown = ({ key } ) => keymap[key] && Module.setButton(port, keymap[key], 1);
-        this.onKeyup = ({ key } ) => keymap[key] && Module.setButton(port, keymap[key], 0);
-        window.addEventListener('keydown', this.onKeydown);
-        window.addEventListener('keyup', this.onKeyup);
+        this.onKeydown = ({ key }) =>
+          keymap[key] && Module.setButton(port, keymap[key], 1);
+        this.onKeyup = ({ key }) =>
+          keymap[key] && Module.setButton(port, keymap[key], 0);
+        window.addEventListener("keydown", this.onKeydown);
+        window.addEventListener("keyup", this.onKeyup);
       }
 
       // Set the right keymap based on the selected emualtor
       function setKeymapForEmulator(name) {
-        const keymaps = document.querySelectorAll('#keymaps > div')
+        const keymaps = document.querySelectorAll("#keymaps > div");
 
         for (const keymap of keymaps) {
           const { console: gameConsole } = keymap.dataset;
           const isActive = gameConsole == name;
-          keymap.style.display = 'none';
+          keymap.style.display = "none";
 
           if (isActive) {
             setKeymap(keymap);
-            keymap.style.display = 'flex';
+            keymap.style.display = "flex";
           }
         }
       }
 
       // Toggle keymap
       function toggleKeymap() {
-        if (toggleKeymapButton.textContent === 'Show keymap') {
-          keymapsElement.style.display = 'block';
-          toggleKeymapButton.textContent = 'Hide keymap';
+        if (toggleKeymapButton.textContent === "Show keymap") {
+          keymapsElement.style.display = "block";
+          toggleKeymapButton.textContent = "Hide keymap";
         } else {
-          keymapsElement.style.display = 'none';
-          toggleKeymapButton.textContent = 'Show keymap';
+          keymapsElement.style.display = "none";
+          toggleKeymapButton.textContent = "Show keymap";
         }
       }
 
@@ -2015,201 +3144,635 @@
       // Todo: proper axis support
       // Todo: rumble
       const gamepadControllers = {
-        'Controller Port 1': null,
-        'Controller Port 2': null,
-        'Controller Port 3': null,
-        'Controller Port 4': null
+        "Controller Port 1": null,
+        "Controller Port 2": null,
+        "Controller Port 3": null,
+        "Controller Port 4": null,
       };
 
       // Todo: map per console
       const gamepadButtonKeymaps = {
         // L/R duplicated for convenience (xinput is for Firefox)
-        'Xbox 360 Controller (XInput STANDARD GAMEPAD)': {
-          'Famicom': [
-            'A', 'B', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "Xbox 360 Controller (XInput STANDARD GAMEPAD)": {
+          Famicom: [
+            "A",
+            "B",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'A', 'B', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "A",
+            "B",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'A', 'B', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "A",
+            "B",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
-        'xinput': {
-          'Famicom': [
-            'A', 'B', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        xinput: {
+          Famicom: [
+            "A",
+            "B",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'A', 'B', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "A",
+            "B",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'A', 'B', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "A",
+            "B",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         // PS4 Controller
         // L/R duplicated for convenience
-        'Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 05c4)': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 05c4)": {
+          Famicom: [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         // PS4 Controller Windows (Chrome)
         // L/R duplicated for convenience
-        'Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 09cc)': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 09cc)": {
+          Famicom: [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         // PS4 Controller Android (Chrome)
         // L/R duplicated for convenience
-        'Wireless Controller TouchPad (STANDARD GAMEPAD Vendor: 054c Product: 09cc)': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
-        },
+        "Wireless Controller TouchPad (STANDARD GAMEPAD Vendor: 054c Product: 09cc)":
+          {
+            Famicom: [
+              "B",
+              "A",
+              "X",
+              "Y",
+              "L",
+              "R",
+              "L",
+              "R",
+              "Select",
+              "Start",
+              null,
+              null,
+              "Up",
+              "Down",
+              "Left",
+              "Right",
+            ],
+            "Super Famicom": [
+              "B",
+              "A",
+              "X",
+              "Y",
+              "L",
+              "R",
+              "L",
+              "R",
+              "Select",
+              "Start",
+              null,
+              null,
+              "Up",
+              "Down",
+              "Left",
+              "Right",
+            ],
+            "Mega Drive": [
+              "B",
+              "A",
+              "X",
+              "Y",
+              "C",
+              "Z",
+              "C",
+              "Z",
+              "Select",
+              "Start",
+              null,
+              null,
+              "Up",
+              "Down",
+              "Left",
+              "Right",
+            ],
+          },
         // PS5 Controller Windows (Chrome)
         // L/R duplicated for convenience
-        'Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 0ce6)': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 0ce6)": {
+          Famicom: [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         // PS5 Controller Android Chrome
         // L/R duplicated for convenience
-        'Wireless Controller (Vendor: 054c Product: 0ce6)': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "Wireless Controller (Vendor: 054c Product: 0ce6)": {
+          Famicom: [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         // PS4 Controller (as detected on iOS and Mac Safari)
         // L/R duplicated for convenience
-        'DUALSHOCK 4 Wireless Controller Extended Gamepad': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "DUALSHOCK 4 Wireless Controller Extended Gamepad": {
+          Famicom: [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         // PS5 Controller (as detected on iOS and Mac Safari)
         // L/R duplicated for convenience
-        'DualSense Wireless Controller Extended Gamepad': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "DualSense Wireless Controller Extended Gamepad": {
+          Famicom: [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
+          "Mega Drive": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         // Switch PRO Controller
         // L/R duplicated for convenience
         // Select/Start duplicated for convenience
-        'Pro Controller (STANDARD GAMEPAD Vendor: 057e Product: 2009)': {
-          'Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+        "Pro Controller (STANDARD GAMEPAD Vendor: 057e Product: 2009)": {
+          Famicom: [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Super Famicom': [
-            'B', 'A', 'X', 'Y', 'L', 'R', 'L', 'R',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
+          "Super Famicom": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "L",
+            "R",
+            "L",
+            "R",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
           ],
-          'Mega Drive': [
-            'B', 'A', 'X', 'Y', 'C', 'Z', 'C', 'Z',
-            'Select', 'Start', null, null, 'Up', 'Down', 'Left', 'Right'
-          ]
-        }
-      }
+          "Mega Drive": [
+            "B",
+            "A",
+            "X",
+            "Y",
+            "C",
+            "Z",
+            "C",
+            "Z",
+            "Select",
+            "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
+        },
+      };
 
       function getVirtualControllerNameForEmulator() {
-        const node = document.querySelector(`#keymaps > div[data-console="${Module.info.currentEmulator}"]`);
-        return node.getAttribute('data-type');
+        const node = document.querySelector(
+          `#keymaps > div[data-console="${Module.info.currentEmulator}"]`
+        );
+        return node.getAttribute("data-type");
       }
 
       function connectGamepad(gamepad) {
         if (!gamepadButtonKeymaps[gamepad.id]) {
-          return notify(`
+          return notify(
+            `
               <h1>😲 Cannot connect gamepad</h1>
               <p>
                 Gamepad detected but no button mappings are available for <strong>${gamepad.id}</strong>
               </p>
-            `, 'warning');
+            `,
+            "warning"
+          );
         }
 
-        for (const [port, currentGamepad] of Object.entries(gamepadControllers)) {
+        for (const [port, currentGamepad] of Object.entries(
+          gamepadControllers
+        )) {
           if (currentGamepad === null) {
             gamepadControllers[port] = gamepad.index;
             Module.disconnectPeripheral(port);
-            Module.connectPeripheral(port, getVirtualControllerNameForEmulator()); // todo: peripheralName according to console 
+            Module.connectPeripheral(
+              port,
+              getVirtualControllerNameForEmulator()
+            ); // todo: peripheralName according to console
 
-            return notify(`
+            return notify(
+              `
               <h1>🔗 Gamepad connected</h1>
               <p>
                 <strong>${gamepad.id}</strong> is connected to <strong>${port}</strong>
               </p>
-            `, 'success');
+            `,
+              "success"
+            );
           }
         }
       }
@@ -2217,27 +3780,33 @@
       function disconnectGamepad(gamepad) {
         for (const [port, index] of Object.entries(gamepadControllers)) {
           if (gamepad.index === index) {
-            if (port !== 'Controller Port 1') {
+            if (port !== "Controller Port 1") {
               Module.disconnectPeripheral(port);
             }
-            
+
             gamepadControllers[port] = null;
 
-            return notify(`
+            return notify(
+              `
               <h1>💨 Gamepad disconnected</h1>
               <p>
                 <strong>${gamepad.id}</strong> is disconnected from <strong>${port}</strong>
               </p>
-            `, 'danger');
+            `,
+              "danger"
+            );
           }
         }
       }
 
       function connectAllGamepadPeripherals() {
         for (const [port, gamepad] of Object.entries(gamepadControllers)) {
-          if (gamepad && port !== 'Controller Port 1') {
+          if (gamepad && port !== "Controller Port 1") {
             Module.disconnectPeripheral(port);
-            Module.connectPeripheral(port, getVirtualControllerNameForEmulator()); // todo: peripheralName according to console 
+            Module.connectPeripheral(
+              port,
+              getVirtualControllerNameForEmulator()
+            ); // todo: peripheralName according to console
           }
         }
       }
@@ -2256,7 +3825,6 @@
         const gamepads = pollGamepads();
 
         for (const [port, index] of Object.entries(gamepadControllers)) {
-
           if (index === null) {
             continue;
           }
@@ -2272,48 +3840,62 @@
         }
       }
 
-      window.addEventListener('gamepadconnected', ({ gamepad }) => connectGamepad(gamepad), false);
-      window.addEventListener("gamepaddisconnected", ({ gamepad }) => disconnectGamepad(gamepad), false);
-      
+      window.addEventListener(
+        "gamepadconnected",
+        ({ gamepad }) => connectGamepad(gamepad),
+        false
+      );
+      window.addEventListener(
+        "gamepaddisconnected",
+        ({ gamepad }) => disconnectGamepad(gamepad),
+        false
+      );
+
       async function selectEmulator(filename) {
         if (Module.info.isRunning) {
           await gameSave(Module.info.currentGame);
 
           Module.info.isRunning = false;
           Module.info.currentGame = null;
-          
+
           Module.unload();
         }
 
-        if(!Module.setEmulatorForFilename(filename)) {
+        if (!Module.setEmulatorForFilename(filename)) {
           throw new Error(`No matching emulator for ${select.value}`);
         }
 
         const emulator = Module.getEmulatorForFilename(filename);
-        console.log('Selected emulator:', emulator);
+        console.log("Selected emulator:", emulator);
 
-        document.querySelectorAll('#core-specific-settings > div').forEach((panel) => {
-          const { dataset, style } = panel;
-          
-          if (dataset.console !== emulator) {
-            style.display = 'none';
-            return;
-          }
+        document
+          .querySelectorAll("#core-specific-settings > div")
+          .forEach((panel) => {
+            const { dataset, style } = panel;
 
-          style.display = 'flex';
-          panel.querySelectorAll('input').forEach(({ id, value, checked }) => configureEmulatorCore(id, checked !== undefined ? checked : value))
-        });
+            if (dataset.console !== emulator) {
+              style.display = "none";
+              return;
+            }
+
+            style.display = "flex";
+            panel
+              .querySelectorAll("input")
+              .forEach(({ id, value, checked }) =>
+                configureEmulatorCore(
+                  id,
+                  checked !== undefined ? checked : value
+                )
+              );
+          });
 
         Module.info.currentEmulator = emulator;
         localStorage.setItem(LAST_GAME, select.value);
-
-        
       }
-
 
       // Load a ROM and start the associated emulator
       async function startGame(filename) {
-        gameLoadingElement.style.display = 'block';
+        gameLoadingElement.style.display = "block";
 
         const { romData, emulator } = await getGame(filename);
         const save = await gameLoad(filename);
@@ -2326,9 +3908,9 @@
         }
 
         connectAllGamepadPeripherals();
-        
-        gameLoadingElement.style.display = 'none';
-        
+
+        gameLoadingElement.style.display = "none";
+
         Module.info.isRunning = true;
         Module.info.currentGame = filename;
 
@@ -2345,17 +3927,24 @@
       // todo: store multiple states
       function stateSave(filename, index) {
         if (!Module.info.isRunning) {
-          return notify(`
+          return notify(
+            `
             <h1>💣No games running</h1>
             <p>
               You need to <strong>start a game</strong> before you can save a state
             </p>
-          `, 'danger', 5000);
+          `,
+            "danger",
+            5000
+          );
         }
 
         Module.stateSave(async (state) => {
-          // todo: Emscripten returns a view on a really large buffer - is there a better way? 
-          const buffer = state.buffer.slice(state.byteOffset, state.byteOffset + state.byteLength);
+          // todo: Emscripten returns a view on a really large buffer - is there a better way?
+          const buffer = state.buffer.slice(
+            state.byteOffset,
+            state.byteOffset + state.byteLength
+          );
           await storeState(filename, index, buffer);
           if (device.isMobile) {
             togglePauseMenu();
@@ -2365,22 +3954,30 @@
 
       async function stateLoad(filename, index) {
         if (!Module.info.isRunning) {
-          return notify(`
+          return notify(
+            `
             <h1>💣No games running</h1>
             <p>
               You need to <strong>start a game</strong> before you can load a state
             </p>
-          `, 'danger', 5000);
+          `,
+            "danger",
+            5000
+          );
         }
 
         const state = await getState(filename, index);
-          if (!state) {
-            return notify(`
+        if (!state) {
+          return notify(
+            `
               <h1>💣No states found</h1>
               <p>
                 You need to <strong>Save state</strong> before you can load a state
               </p>
-            `, 'danger', 5000);
+            `,
+            "danger",
+            5000
+          );
         }
         Module.stateLoad(state);
         if (device.isMobile) {
@@ -2391,7 +3988,10 @@
       async function gameSave(filename) {
         // todo: Emscripten returns a view on a really large buffer - is there a better way?
         const save = Module.save();
-        for (const [filename, { buffer, byteOffset, byteLength }] of Object.entries(save)) {
+        for (const [
+          filename,
+          { buffer, byteOffset, byteLength },
+        ] of Object.entries(save)) {
           save[filename] = buffer.slice(byteOffset, byteOffset + byteLength);
         }
         await storeSave(filename, save);
@@ -2405,12 +4005,12 @@
       function setPause() {
         fpsMeter.pause();
         Module.stop();
-        document.body.classList.add('paused');
+        document.body.classList.add("paused");
         pauseButton.textContent = "Resume";
       }
 
       function setResume() {
-        document.body.classList.remove('paused');
+        document.body.classList.remove("paused");
         fpsMeter.resume();
         Module.start();
         pauseButton.textContent = "Pause";
@@ -2432,41 +4032,44 @@
       // Manage notifications
       function notify(innerHTML, type, timeout) {
         timeout = timeout || 5000;
-        type = type || 'warning';
+        type = type || "warning";
 
-        const notification = document.createElement('div');
-        notification.classList.add('alert');
+        const notification = document.createElement("div");
+        notification.classList.add("alert");
         notification.classList.add(`alert-${type}`);
-        notification.dataset.role = 'alert';
+        notification.dataset.role = "alert";
         notification.innerHTML = innerHTML;
 
         notificationBoxContainerElement.appendChild(notification);
-        setTimeout(() => notification.classList.add('show'), 10);
+        setTimeout(() => notification.classList.add("show"), 10);
         setTimeout(() => {
-          notification.classList.remove('show');
-          setTimeout(() => notificationBoxContainerElement.removeChild(notification), 250);
+          notification.classList.remove("show");
+          setTimeout(
+            () => notificationBoxContainerElement.removeChild(notification),
+            250
+          );
         }, timeout);
       }
 
       // Manage overlay used for loading, etc.
       function showOverlay() {
-        overlayElement.style.display = 'flex';
-        setTimeout(() => overlayElement.style.opacity = 1, 0);
+        overlayElement.style.display = "flex";
+        setTimeout(() => (overlayElement.style.opacity = 1), 0);
       }
 
       function hideOverlay() {
         overlayElement.style.opacity = 0;
-        setTimeout(() => overlayElement.style.display = 'none', 250);
+        setTimeout(() => (overlayElement.style.display = "none"), 250);
       }
 
       function togglePauseMenu() {
-        if (pauseMenu.style.display === 'none') {
-          pauseMenu.style.display = 'block';
-          pauseMenuButton.style.display = 'none';
+        if (pauseMenu.style.display === "none") {
+          pauseMenu.style.display = "block";
+          pauseMenuButton.style.display = "none";
         } else {
-          pauseMenu.style.display = 'none';
-          pauseMenuButton.style.display = 'block';
-          settingsAreaElement.classList.remove('show');
+          pauseMenu.style.display = "none";
+          pauseMenuButton.style.display = "block";
+          settingsAreaElement.classList.remove("show");
         }
       }
 
@@ -2480,7 +4083,7 @@
             displayControllerForEmulator();
           }
         } else {
-          document.body.style.height = 'auto';
+          document.body.style.height = "auto";
         }
       }
     </script>
