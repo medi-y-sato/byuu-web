@@ -9,10 +9,12 @@ bool isRunning() { return webplatform->running; }
 
 static uint lastExecution = chrono::millisecond();
 
-void run() {
+void run()
+{
     uint currentExecution = chrono::millisecond();
 
-    if (currentExecution - lastExecution < 16) {
+    if (currentExecution - lastExecution < 16)
+    {
         return;
     }
 
@@ -20,27 +22,33 @@ void run() {
 
     webplatform->run();
 
-    if (!scheduledStateSave.isNull()) {
-        webplatform->stateSave(scheduledStateSave); 
+    if (!scheduledStateSave.isNull())
+    {
+        webplatform->stateSave(scheduledStateSave);
         scheduledStateSave = emscripten::val::null();
     }
 
     // Cancel main loop if we are not running
-    if (!webplatform->started) {
-        emscripten_cancel_main_loop(); 
+    if (!webplatform->started)
+    {
+        emscripten_cancel_main_loop();
     }
 }
 
-void onFrameStart(emscripten::val callback) {
+void onFrameStart(emscripten::val callback)
+{
     webplatform->onFrameStart = callback;
 }
 
-void onFrameEnd(emscripten::val callback) {
+void onFrameEnd(emscripten::val callback)
+{
     webplatform->onFrameEnd = callback;
 }
 
-bool start() { 
-    if (webplatform->started) {
+bool start()
+{
+    if (webplatform->started)
+    {
         return false;
     }
 
@@ -50,40 +58,45 @@ bool start() {
     return true;
 }
 
-bool stop() { 
-    if (!webplatform->started) {
+bool stop()
+{
+    if (!webplatform->started)
+    {
         return false;
     }
 
     webplatform->started = false;
-    emscripten_cancel_main_loop(); 
-    
+    emscripten_cancel_main_loop();
+
     return true;
 }
 
-void unload() { 
-    if (webplatform->started) {
-        stop(); 
+void unload()
+{
+    if (webplatform->started)
+    {
+        stop();
     }
-    
-    return webplatform->unload(); 
+
+    return webplatform->unload();
 }
 
 /*  bootstrap */
 bool initialize(std::string windowTitle) { return webplatform->initialize(windowTitle.c_str()); }
-void terminate() { 
+void terminate()
+{
     stop();
     unload();
     webplatform->terminate();
 }
 
 std::string getEmulatorForFilename(std::string path) { return webplatform->getEmulatorForFilename(path.c_str()).data(); };
-emscripten::val getROMInfo(std::string path, std::string rom) { return webplatform->getROMInfo(path.c_str(), (uint8_t *) rom.c_str(), rom.size()); }
+emscripten::val getROMInfo(std::string path, std::string rom) { return webplatform->getROMInfo(path.c_str(), (uint8_t *)rom.c_str(), rom.size()); }
 
 bool setEmulator(std::string emulatorName) { return webplatform->setEmulator(emulatorName.c_str()); }
 bool setEmulatorForFilename(std::string path) { return webplatform->setEmulatorForFilename(path.c_str()); }
 
-emscripten::val load(std::string rom, emscripten::val files) { return webplatform->load((uint8_t *) rom.c_str(), rom.size(), files); }
+emscripten::val load(std::string rom, emscripten::val files) { return webplatform->load((uint8_t *)rom.c_str(), rom.size(), files); }
 
 /* configuration */
 void configure(std::string name, double value) { return webplatform->configure(name.c_str(), value); }
@@ -94,16 +107,19 @@ void setMute(bool mute) { webplatform->setMute(mute); }
 /* controllers and peripherals */
 bool connectPeripheral(std::string portName, std::string peripheralName) { return webplatform->connect(portName.c_str(), peripheralName.c_str()); }
 bool disconnectPeripheral(std::string portName) { return webplatform->disconnect(portName.c_str()); }
-bool setButton(std::string portName, std::string buttonName, int16_t value) {
+bool setButton(std::string portName, std::string buttonName, int16_t value)
+{
     return webplatform->setButton(portName.c_str(), buttonName.c_str(), value);
 }
 
 /* state save, memory saves */
-void stateSave(emscripten::val callback) { 
+void stateSave(emscripten::val callback)
+{
     scheduledStateSave = callback;
 
     // Run one cycle then stop
-    if (!webplatform->started) {
+    if (!webplatform->started)
+    {
         emscripten_set_main_loop(run, 0, 0);
     }
 }
@@ -111,7 +127,8 @@ void stateSave(emscripten::val callback) {
 bool stateLoad(std::string state) { return webplatform->stateLoad(state.c_str(), state.size()); }
 emscripten::val save() { return webplatform->save(); }
 
-EMSCRIPTEN_BINDINGS(my_module) {
+EMSCRIPTEN_BINDINGS(my_module)
+{
     emscripten::function("initialize", &initialize);
     emscripten::function("terminate", &terminate);
     emscripten::function("getEmulatorForFilename", &getEmulatorForFilename);
@@ -124,23 +141,23 @@ EMSCRIPTEN_BINDINGS(my_module) {
     emscripten::function("run", &run);
     emscripten::function("start", &start);
     emscripten::function("stop", &stop);
-    
+
     emscripten::function("isStarted", &isStarted);
     emscripten::function("isRunning", &isRunning);
-    
+
     emscripten::function("onFrameStart", &onFrameStart);
     emscripten::function("onFrameEnd", &onFrameEnd);
     emscripten::function("onResize", &onResize);
-    
+
     emscripten::function("setVolume", &setVolume);
     emscripten::function("setMute", &setMute);
 
     emscripten::function("connectPeripheral", &connectPeripheral);
     emscripten::function("disconnectPeripheral", &disconnectPeripheral);
     emscripten::function("setButton", &setButton);
-    
+
     emscripten::function("getROMInfo", &getROMInfo);
-    
+
     emscripten::function("stateSave", &stateSave);
     emscripten::function("stateLoad", &stateLoad);
     emscripten::function("save", &save);
