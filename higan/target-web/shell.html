@@ -732,6 +732,39 @@
         top: 92%;
       }
 
+      #virtualGamepad .console[data-console="PC Engine"] .button_Left {
+        left: 12.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Right {
+        left: 37.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Up {
+        left: 25%;
+        top: 33.333%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Down {
+        left: 25%;
+        top: 66.666%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_A {
+        left: 85%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_B {
+        left: 65%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Select {
+        left: 11%;
+        top: 92%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Start {
+        left: 89%;
+        top: 92%;
+      }
+
       #virtualGamepad.md3Buttons
         .console[data-console="Mega Drive"]
         .button_Left {
@@ -805,6 +838,17 @@
         /* green */
         filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg)
           saturate(1000%) contrast(0.8);
+      }
+
+      #virtualGamepad.colored .console[data-console="PC Engine"] .button_A {
+        /* red */
+        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+          saturate(600%) contrast(0.8);
+      }
+      #virtualGamepad.colored .console[data-console="PC Engine"] .button_B {
+        /* red */
+        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+          saturate(600%) contrast(0.8);
       }
 
       @media (orientation: landscape) {
@@ -1017,6 +1061,43 @@
           left: 94.5%;
           top: 92%;
         }
+      }
+
+      #virtualGamepad .console[data-console="PC Engine"] .button_Left {
+        left: 6.25%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Right {
+        left: 18.75%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Up {
+        left: 12.5%;
+        top: 33.333%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Down {
+        left: 12.5%;
+        top: 66.666%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_A {
+        left: 92.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_B {
+        left: 82.5%;
+        top: 50%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Select {
+        left: 5.5%;
+        top: 92%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Start {
+        left: 94.5%;
+        top: 92%;
+      }
+      #virtualGamepad .console[data-console="PC Engine"] .button_Microphone {
+        left: 87.75%;
+        top: 25%;
       }
 
       /* Loading screen */
@@ -1405,6 +1486,39 @@
                   <label for="md-vdp-overclock">VDP Overclock</label>
                 </div>
               </div>
+              <div data-console="PC Engine">
+                <div class="label">PCE Core</div>
+                <div class="values">
+                  <input
+                    type="checkbox"
+                    name="pce-overscan"
+                    id="pce-overscan"
+                  />
+                  <label for="pce-overscan">Overscan</label>
+                  <input
+                    type="checkbox"
+                    name="pce-skipframe"
+                    id="pce-skipframe"
+                  />
+                  <label for="pce-skipframe">Skip frame</label>
+                  <input
+                    type="checkbox"
+                    name="pce-synconce"
+                    id="pce-synconce"
+                    checked
+                  />
+                  <label for="pce-synconce">CPU - Sync once per cycle</label>
+                  <select name="pce-overclock" id="pce-overclock">
+                    <option value="0.25">0.25</option>
+                    <option value="0.5">0.5</option>
+                    <option value="0.75">0.75</option>
+                    <option value="1" selected>1</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                  </select>
+                  <label for="pce-overclock">Overclock</label>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -1542,6 +1656,36 @@
           </div>
           <div class="keymap">
             <span class="button">Start</span><span class="key">Enter</span>
+          </div>
+        </div>
+        <div
+          data-console="PC Engine"
+          data-port="Controller Port 1"
+          data-type="Gamepad"
+        >
+          <div class="keymap">
+            <span class="button">Up</span><span class="key">W</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Left</span><span class="key">A</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Down</span><span class="key">S</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Right</span><span class="key">D</span>
+          </div>
+          <div class="keymap">
+            <span class="button">I</span><span class="key">K</span>
+          </div>
+          <div class="keymap">
+            <span class="button">II</span><span class="key">L</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Select</span><span class="key">Backspace</span>
+          </div>
+          <div class="keymap">
+            <span class="button">Run</span><span class="key">Enter</span>
           </div>
         </div>
       </div>
@@ -2112,6 +2256,118 @@
           data-y="92"
         ></div>
       </div>
+      <div
+        class="console"
+        data-console="PC Engine"
+        data-orientation="portrait"
+        data-port="Controller Port 1"
+        data-type="Gamepad"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="12.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="37.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="25"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="25"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="85"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="65"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Select"
+          data-label="Select"
+          data-x="11"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="94.5"
+          data-y="92"
+        ></div>
+      </div>
+      <div
+        class="console"
+        data-console="PC Engine"
+        data-orientation="landscape"
+        data-port="Controller Port 1"
+        data-type="Gamepad"
+      >
+        <div
+          class="button button_Left"
+          data-label="Left"
+          data-x="6.25"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Right"
+          data-label="Right"
+          data-x="18.75"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Up"
+          data-label="Up"
+          data-x="12.5"
+          data-y="33.333"
+        ></div>
+        <div
+          class="button button_Down"
+          data-label="Down"
+          data-x="12.5"
+          data-y="66.666"
+        ></div>
+        <div
+          class="button button_A"
+          data-label="A"
+          data-x="92.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_B"
+          data-label="B"
+          data-x="82.5"
+          data-y="50"
+        ></div>
+        <div
+          class="button button_Select"
+          data-label="Select"
+          data-x="5.5"
+          data-y="92"
+        ></div>
+        <div
+          class="button button_Start"
+          data-label="Start"
+          data-x="94.5"
+          data-y="92"
+        ></div>
+      </div>
     </div>
 
     <script type="text/javascript">
@@ -2502,6 +2758,21 @@
                 return true;
             }
             return false;
+          case "pce":
+            switch (name) {
+              case "overclock":
+                Module.configure("cpu/overclock", parseFloat(value));
+                return true;
+              case "synconce":
+                Module.configure("cpu/synconce", value);
+                return true;
+              case "overscan":
+                Module.configure("ppu/overscan", value);
+                return true;
+              case "skipframe":
+                Module.configure("ppu/skipframe", value);
+                return true;
+            }
         }
       }
       document.forms.settingsForm.addEventListener(
@@ -2629,6 +2900,7 @@
         };
 
         selectEmulator(filename);
+        console.log(`selectEmulator done`);
 
         return new Promise((resolve, reject) => {
           const tx = db.transaction(["roms"], "readwrite");
@@ -2835,6 +3107,7 @@
           Module.setStatus(`Preparing`);
         },
         setStatus: function (text) {
+          console.log(`setState(${text})`);
           if (!text || text === "Running...") {
             return;
           }
@@ -3208,6 +3481,24 @@
             "Left",
             "Right",
           ],
+          "PC Engine": [
+            "I",
+            "II",
+            "IV",
+            "X",
+            "III",
+            "VI",
+            "L",
+            "R",
+            "Select",
+            "Run",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
         },
         xinput: {
           Famicom: [
@@ -3257,6 +3548,24 @@
             "Z",
             "Select",
             "Start",
+            null,
+            null,
+            "Up",
+            "Down",
+            "Left",
+            "Right",
+          ],
+          "PC Engine": [
+            "I",
+            "II",
+            "IV",
+            "X",
+            "III",
+            "VI",
+            "L",
+            "R",
+            "Select",
+            "Run",
             null,
             null,
             "Up",
@@ -3895,6 +4204,7 @@
 
       // Load a ROM and start the associated emulator
       async function startGame(filename) {
+        console.log(`startGame(${filename})`);
         gameLoadingElement.style.display = "block";
 
         const { romData, emulator } = await getGame(filename);
@@ -3921,6 +4231,7 @@
             togglePauseMenu();
           }
         }, 100);
+        console.log(`startGame(${filename}) done`);
       }
 
       // state save/load, save
