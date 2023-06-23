@@ -2,127 +2,134 @@
 #include <icarus/icarus.hpp>
 
 #ifdef CORE_FC
-  #include "famicom.cpp"
+#include "famicom.cpp"
 #endif
 
 #ifdef CORE_GB
-  #include "game-boy.cpp"
+#include "game-boy.cpp"
 #endif
 
 #ifdef CORE_GBA
-  #include "game-boy-advance.cpp"
+#include "game-boy-advance.cpp"
 #endif
 
 #ifdef CORE_MD
-  #include "mega-drive.cpp"
+#include "mega-drive.cpp"
 #endif
 
 #ifdef CORE_MS
-  #include "master-system.cpp"
+#include "master-system.cpp"
 #endif
 
 #ifdef CORE_MSX
-  #include "msx.cpp"
+#include "msx.cpp"
 #endif
 
 #ifdef CORE_NGP
-  #include "neo-geo-pocket.cpp"
+#include "neo-geo-pocket.cpp"
 #endif
 
 #ifdef CORE_PCE
-  #include "pc-engine.cpp"
+#include "pc-engine.cpp"
 #endif
 
 #ifdef CORE_SFC
-  #include "super-famicom.cpp"
+#include "super-famicom.cpp"
 #endif
 
 #ifdef CORE_SG
-  #include "sg-1000.cpp"
+#include "sg-1000.cpp"
 #endif
 
 #ifdef CORE_WS
-  #include "wonderswan.cpp"
+#include "wonderswan.cpp"
 #endif
 
 vector<shared_pointer<Emulator>> emulators;
 shared_pointer<Emulator> emulator;
 
-auto Emulator::construct() -> void {
+auto Emulator::construct() -> void
+{
   icarus::construct();
 
-  #ifdef CORE_FC
+#ifdef CORE_FC
   emulators.append(new Famicom);
   emulators.append(new FamicomDiskSystem);
-  #endif
+#endif
 
-  #ifdef CORE_SFC
+#ifdef CORE_SFC
   emulators.append(new SuperFamicom);
-  #endif
+#endif
 
-  #ifdef CORE_SG
+#ifdef CORE_SG
   emulators.append(new SG1000);
-  #endif
+#endif
 
-  #ifdef CORE_MS
+#ifdef CORE_MS
   emulators.append(new MasterSystem);
-  #endif
+#endif
 
-  #ifdef CORE_MD
+#ifdef CORE_MD
   emulators.append(new MegaDrive);
   emulators.append(new MegaCD);
-  #endif
+#endif
 
-  #ifdef CORE_PCE
+#ifdef CORE_PCE
   emulators.append(new PCEngine);
   emulators.append(new PCEngineCD);
   emulators.append(new SuperGrafx);
-  #endif
+#endif
 
-  #ifdef CORE_MSX
+#ifdef CORE_MSX
   emulators.append(new MSX);
   emulators.append(new MSX2);
-  #endif
+#endif
 
-  #ifdef CORE_GB
+#ifdef CORE_GB
   emulators.append(new GameBoy);
   emulators.append(new GameBoyColor);
-  #endif
+#endif
 
-  #ifdef CORE_GBA
+#ifdef CORE_GBA
   emulators.append(new GameBoyAdvance);
-  #endif
+#endif
 
-  #ifdef CORE_MS
+#ifdef CORE_MS
   emulators.append(new GameGear);
-  #endif
+#endif
 
-  #ifdef CORE_WS
+#ifdef CORE_WS
   emulators.append(new WonderSwan);
   emulators.append(new WonderSwanColor);
   emulators.append(new PocketChallengeV2);
-  #endif
+#endif
 
-  #ifdef CORE_NGP
+#ifdef CORE_NGP
   emulators.append(new NeoGeoPocket);
   emulators.append(new NeoGeoPocketColor);
-  #endif
+#endif
 }
 
-auto Emulator::locate(const string& location, const string& suffix, const string& path) -> string {
-  //game path
-  if(!path) return {Location::notsuffix(location), suffix};
+auto Emulator::locate(const string &location, const string &suffix, const string &path) -> string
+{
+  // game path
+  if (!path)
+    return {Location::notsuffix(location), suffix};
 
-  //path override
+  // path override
   string pathname = {path, "/"};
   directory::create(pathname);
   return {pathname, Location::prefix(location), suffix};
 }
 
-auto Emulator::manifest() -> shared_pointer<vfs::file> {
-  for(auto& media : icarus::media) {
-    if(media->name() != interface->name()) continue;
-    if(auto cartridge = media.cast<icarus::Cartridge>()) {
+auto Emulator::manifest() -> shared_pointer<vfs::file>
+{
+  for (auto &media : icarus::media)
+  {
+    if (media->name() != interface->name())
+      continue;
+    if (auto cartridge = media.cast<icarus::Cartridge>())
+    {
       game.manifest = cartridge->manifest(game.image, game.location);
       return vfs::memory::file::open(game.manifest.data<uint8_t>(), game.manifest.size());
     }
@@ -130,7 +137,8 @@ auto Emulator::manifest() -> shared_pointer<vfs::file> {
   return {};
 }
 
-auto Emulator::load(const string& location, const vector<uint8_t>& image) -> bool {
+auto Emulator::load(const string &location, const vector<uint8_t> &image) -> bool
+{
   game.location = location;
   game.image = image;
 
@@ -143,44 +151,57 @@ auto Emulator::load(const string& location, const vector<uint8_t>& image) -> boo
   // setBoolean("Color Emulation", settings.video.colorEmulation);
   // setBoolean("Interframe Blending", settings.video.interframeBlending);
   // setOverscan(settings.video.overscan);
-  if(!load()) return false;
+  if (!load())
+    return false;
 
   interface->power();
   return true;
 }
 
-auto Emulator::loadFirmware(const Firmware& firmware) -> shared_pointer<vfs::file> {
-  if(firmware.location.iendsWith(".zip")) {
+auto Emulator::loadFirmware(const Firmware &firmware) -> shared_pointer<vfs::file>
+{
+  if (firmware.location.iendsWith(".zip"))
+  {
     Decode::ZIP archive;
-    if(archive.open(firmware.location) && archive.file) {
+    if (archive.open(firmware.location) && archive.file)
+    {
       auto image = archive.extract(archive.file.first());
       return vfs::memory::file::open(image.data(), image.size());
     }
-  } else if(auto image = file::read(firmware.location)) {
+  }
+  else if (auto image = file::read(firmware.location))
+  {
     return vfs::memory::file::open(image.data(), image.size());
   }
   return {};
 }
 
-auto Emulator::save() -> void {
+auto Emulator::save() -> void
+{
   interface->save();
 }
 
-auto Emulator::unload() -> void {
+auto Emulator::unload() -> void
+{
   interface->unload();
 }
 
-auto Emulator::setBoolean(const string& name, bool value) -> bool {
-  if(auto node = root->scan<higan::Node::Boolean>(name)) {
+auto Emulator::setBoolean(const string &name, bool value) -> bool
+{
+  if (auto node = root->scan<higan::Node::Boolean>(name))
+  {
     node->setValue(value);
     return true;
   }
   return false;
 }
 
-auto Emulator::setOverscan(bool value) -> bool {
-  if(auto screen = root->scan<higan::Node::Screen>("Screen")) {
-    if(auto region = screen->find<higan::Node::String>("Region")) {
+auto Emulator::setOverscan(bool value) -> bool
+{
+  if (auto screen = root->scan<higan::Node::Screen>("Screen"))
+  {
+    if (auto region = screen->find<higan::Node::String>("Region"))
+    {
       // region->setValue(!settings.video.overscan ? "NTSC" : "PAL");
       return true;
     }
@@ -188,18 +209,22 @@ auto Emulator::setOverscan(bool value) -> bool {
   return false;
 }
 
-auto Emulator::error(const string& text) -> void {
+auto Emulator::error(const string &text) -> void
+{
   printf("ERROR: %s\n", text.data());
 }
 
-auto Emulator::connect(const string& portName, const string& peripheralName) -> bool {
-  if(auto port = root->find<higan::Node::Port>(portName)) {
+auto Emulator::connect(const string &portName, const string &peripheralName) -> bool
+{
+  if (auto port = root->find<higan::Node::Port>(portName))
+  {
     auto peripheral = port->allocate();
     peripheral->setName(peripheralName);
     peripheral->setAttribute<string>("portName", portName);
 
     std::map<string, int16_t> buttonMap;
-    for (auto buttonName : buttons) {
+    for (auto buttonName : buttons)
+    {
       buttonMap[buttonName] = 0;
     }
     buttonMaps.insert(portName, buttonMap);
@@ -211,8 +236,10 @@ auto Emulator::connect(const string& portName, const string& peripheralName) -> 
   return false;
 }
 
-auto Emulator::disconnect(const string& portName) -> bool {
-  if(auto port = root->find<higan::Node::Port>(portName)) {
+auto Emulator::disconnect(const string &portName) -> bool
+{
+  if (auto port = root->find<higan::Node::Port>(portName))
+  {
     port->disconnect();
     buttonMaps.remove(portName);
     return true;
@@ -221,35 +248,43 @@ auto Emulator::disconnect(const string& portName) -> bool {
   return false;
 }
 
-auto Emulator::setButton(const string& buttonName, int16_t value) -> bool {
-  return setButton("", buttonName, value); 
+auto Emulator::setButton(const string &buttonName, int16_t value) -> bool
+{
+  return setButton("", buttonName, value);
 }
 
-auto Emulator::setButton(const string& portName, const string& buttonName, int16_t value) -> bool {
-  if (auto buttonMap = buttonMaps.find(portName)) {
+auto Emulator::setButton(const string &portName, const string &buttonName, int16_t value) -> bool
+{
+  if (auto buttonMap = buttonMaps.find(portName))
+  {
     buttonMap.get()[buttonName] = value;
     return true;
   }
 
   return false;
-} 
+}
 
-auto Emulator::input(higan::Node::Input node) -> void {
+auto Emulator::input(higan::Node::Input node) -> void
+{
   string portName = "";
-  
-  if (auto parent = node->parent()) {
+
+  if (auto parent = node->parent())
+  {
     portName = parent.acquire()->attribute<string>("portName");
   }
 
-  if (auto buttonMap = buttonMaps.find(portName)) {
-    if(auto button = node->cast<higan::Node::Button>()) {
+  if (auto buttonMap = buttonMaps.find(portName))
+  {
+    if (auto button = node->cast<higan::Node::Button>())
+    {
       auto buttonName = node->name();
       button->setValue(buttonMap.get()[buttonName]);
     }
   }
 }
 
-auto Emulator::errorFirmwareRequired(const Firmware& firmware) -> void {
+auto Emulator::errorFirmwareRequired(const Firmware &firmware) -> void
+{
   // if(MessageDialog().setText({
   //   emulator->name, " - ", firmware.type, " (", firmware.region, ") is required to play this game.\n"
   //   "Would you like to configure firmware settings now?"

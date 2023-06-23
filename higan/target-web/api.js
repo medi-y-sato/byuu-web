@@ -2,6 +2,9 @@
 export const Emulator = {
   Famicom: 'Famicom',
   SuperFamicom: 'Super Famicom',
+//  GameBoy: 'GameBoy',
+//  GameBoyAdvance: 'GameBoy Advance',
+  PCEngine: 'PC Engine',
   MegaDrive: 'Mega Drive'
 }
 
@@ -45,7 +48,10 @@ export const Settings = {
       Skipframe: 'ppu/skipframe',
       OptimizeSteps: 'vdp/optimizeSteps'
     }
-  }
+  },
+//  [Emulator.GameBoy]: { },
+//  [Emulator.GameBoyAdvance]: { },
+  [Emulator.PCEngine]: { },
 }
 
 let lib;

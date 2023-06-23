@@ -12,6 +12,9 @@ type ByuuIsDirty = $dirty;
 export const enum Emulator {
   Famicom = "Famicom",
   SuperFamicom = "Super Famicom",
+  //  GameBoy = "GameBoy",
+  //  GameBoyAdvance = "GameBoy Advance",
+  PCEngine = "PC Engine",
   MegaDrive = "Mega Drive",
 }
 
@@ -105,6 +108,17 @@ export const Settings: SettingsEntries = {
        * it can break a number of games.
        */
       OptimizeSteps: "vdp/optimizeSteps",
+    },
+  },
+  //  [Emulator.GameBoy]: {},
+  //  [Emulator.GameBoyAdvance]: {},
+  [Emulator.PCEngine]: {
+    PPU: {
+      Skipframe: "ppu/skipframe",
+      Overscan: "ppu/overscan",
+    },
+    CPU: {
+      SyncOnce: "cpu/synconce",
     },
   },
 };

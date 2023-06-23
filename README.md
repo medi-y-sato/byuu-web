@@ -46,6 +46,12 @@ make all debug=false ; make package
 make clean
 ```
 
+開発の時はビルド前必ずcleanしとくべき、わりとビルド済みの誤判定する
+
+```sh
+make clean ; make all debug=true ; make app ; make serve
+```
+
 ## 出力先
 
 
