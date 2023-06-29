@@ -2,7 +2,9 @@
 export const Emulator = {
   Famicom: 'Famicom',
   SuperFamicom: 'Super Famicom',
-  MegaDrive: 'Mega Drive'
+  GameBoy: 'GameBoy',
+  GameBoyAdvance: 'GameBoy Advance',
+    MegaDrive: 'Mega Drive'
 }
 
 export const EmulatorEvent = {
@@ -29,6 +31,24 @@ export const Settings = {
     }
   },
   [Emulator.Famicom]: {
+    PPU: {
+      Skipframe: 'ppu/skipframe',
+      Overscan: 'ppu/overscan'
+    },
+    CPU: {
+      SyncOnce: 'cpu/synconce'
+    }
+  },
+  [Emulator.GameBoy]: {
+    PPU: {
+      Skipframe: 'ppu/skipframe',
+      Overscan: 'ppu/overscan'
+    },
+    CPU: {
+      SyncOnce: 'cpu/synconce'
+    }
+  },
+  [Emulator.GameBoyAdvance]: {
     PPU: {
       Skipframe: 'ppu/skipframe',
       Overscan: 'ppu/overscan'

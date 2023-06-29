@@ -117,7 +117,7 @@ all: package app
 # This is required to deal with WASM map durring debugging, 
 # so the required source file(s) may be accessed
 serve:
-	python ./target-web/serve.py \
+	python2 ./target-web/serve.py \
     ${CURDIR}/.. \
     ${CURDIR}/out/app \
     ${CURDIR}/out/package \
